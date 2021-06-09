@@ -41,7 +41,7 @@ __python_version__ = f"{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_
 
 @app.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}alive (.*)"))
 async def alive_t(event):
-    if "-t" in event.text:
+    if "t" in event.text:
         pass
     else:
         return
@@ -60,7 +60,7 @@ async def alive_t(event):
 
 @app.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}ping (.*)"))
 async def _(event):
-    if "-t" in event.text:
+    if "t" in event.text:
         pass
     else:
         return
