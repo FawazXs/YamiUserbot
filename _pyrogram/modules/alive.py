@@ -59,7 +59,8 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n"
+    reply_msg = f"**[✨ VINA USERBOT ✨](https://github.com/levina-lab/vinauserbot)**\n\n"
+    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n\n"
     reply_msg += f"**VERSI PYTHON:** `{__python_version__}`\n"
     reply_msg += f"**VERSI PYROGRAM:** `{__pyro_version__}`\n"
     end_time = time.time()
