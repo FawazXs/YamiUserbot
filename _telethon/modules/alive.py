@@ -49,7 +49,7 @@ async def alive_t(event):
     end = datetime.now()
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[۩▬▬𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓▬▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━"
+    reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"┣• versi python: `{__python_version__}`\n"
     reply_msg += f"┣• versi pyrogram: `{__tele_version__}`\n"
     reply_msg += f"┣• versi userbot:** `0.1`**\n"
@@ -68,4 +68,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"<b><a href=https://docs.telethon.dev>[𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡 𝗕𝗢𝗧]</a><b/> • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓 \n\n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
+    await event.edit(f"<b><a href=https://docs.telethon.dev>𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡 𝗕𝗢𝗧</a><b/> • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓 \n\n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
