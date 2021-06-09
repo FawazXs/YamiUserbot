@@ -49,7 +49,8 @@ async def alive_t(event):
     end = datetime.now()
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n"
+    reply_msg = f"**[✨ VINA USERBOT ✨](https://github.com/levina-lab/vinauserbot)**\n\n"
+    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n\n"
     reply_msg += f"VERSI PYTHON: `{__python_version__}`\n"
     reply_msg += f"VERSI PYROGRAM: `{__tele_version__}`\n"
     end_time = time.time()
@@ -66,4 +67,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"<b><a href=https://docs.telethon.dev>[TELETHON]</a><b/> \n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
+    await event.edit(f"<b><a href=https://docs.telethon.dev>[TELETHON BOT]</a><b/> \n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
