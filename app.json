@@ -1,7 +1,6 @@
 {
   "name": "vina userbot",
   "description": "userbot untuk bersenang senang",
-  "logo": "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
     "developer",
@@ -18,6 +17,7 @@
   "repository": "https://github.com/levina-lab/vinauserbot",
   "website": "jayantkageri.ml",
   "success_url": "jayantkageri.ml",
+  "logo": "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "stack": "heroku-20",
   "env": {
     "ENV": {
