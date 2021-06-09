@@ -19,19 +19,19 @@ CMD_HELP.update(
     {
         "Admin Tools": """
  **Admin Tools** 
-  `ban` -> Bans user indefinitely.
-  `unban` -> Unbans the user.
-  `promote` [optional title] -> Promotes a user.
-  `demote` _> Demotes a user.
-  `mute` -> Mutes user indefinitely.
-  `unmute` -> Unmutes the user.
-  `kick` -> Kicks the user out of the group.
-  `gmute` -> Doesn't lets a user speak(even admins).
-  `ungmute` -> Inverse of what gmute does.
-  `pin` -> pins a message.
-  `del` -> delete a message.
-  `purge` -> purge message(s)
-  `invite` -> add user to chat.
+  `ban` -> Banned anggota secara permanent.
+  `unban` -> Unban anggota yang dibanned.
+  `promote` [title] -> Promosikan anggota jadi admin.
+  `demote` _> Menurunkan admin.
+  `mute` -> Mute anggota secara permanent.
+  `unmute` -> Unmute anggota yang di mute.
+  `kick` -> Tendang anggota keluar dari grup.
+  `gmute` -> Mute pengguna secara global (hanya admin grup).
+  `ungmute` -> Melepaskan pengguna dari global mute.
+  `pin` -> pin pesan.
+  `del` -> hapus pesan.
+  `purge` -> hapus pesan anda secara berkala.
+  `invite` -> tambahkan pengguna ke obrolan.
 """
     }
 )
@@ -124,7 +124,7 @@ async def unmute(_, message: Message):
     try:
         get_user = await app.get_users(user)
         await app.restrict_chat_member(chat_id=message.chat.id, user_id=get_user.id, permissions=unmute_permissions)
-        await message.edit(f"[{get_user.first_name}](tg://user?id={get_user.id}) has been muted.**")
+        await message.edit(f"[{get_user.first_name}](tg://user?id={get_user.id}) has been unmuted.**")
     except Exception as e:
         await message.edit(f"{e}")
 
@@ -139,7 +139,7 @@ async def kick_usr(_, message: Message):
         get_user = await app.get_users(user)
         await app.kick_chat_member(chat_id=message.chat.id, user_id=get_user.id)
         await app.unban_chat_member(chat_id=message.chat.id, user_id=get_user.id)
-        await message.edit(f"Succefully Kicked [{get_user.first_name}](tg://user?id={get_user.id})")
+        await message.edit(f"berhasil menendang [{get_user.first_name}](tg://user?id={get_user.id})")
     except Exception as e:
         await message.edit(f"{e}")
 
@@ -174,18 +174,18 @@ async def pin_message(_, message: Message):
                     message.reply_to_message.message_id,
                     disable_notification=disable_notification,
                 )
-                await message.edit("`Pinned message!`")
+                await message.edit("`pinned message!`")
             else:
                 # You didn't reply to a message and we can't pin anything. ffs
                 await message.edit(
-                    "`Reply to a message so that I can pin the god damned thing...`"
+                    "`reply ke pesan yang mau di pin sayang ku 😘...`"
                 )
         else:
             # You have no business running this command.
-            await message.edit("User need to be Admin to use this command")
+            await message.edit("anda harus jadi admin jika ingin melakukan ini!")
     else:
         # Are you fucking dumb this is not a group ffs.
-        await message.edit("`This is not a place where I can Pin Messages`")
+        await message.edit("`Ini bukan tempat di mana saya bisa menyematkan pesan`")
 
     # And of course delete your lame attempt at changing the group picture.
     # RIP you.
@@ -210,7 +210,7 @@ async def promote(client, message: Message):
         get_user = await app.get_users(user)
         await app.promote_chat_member(message.chat.id, user, can_manage_chat=True, can_change_info=True, can_delete_messages=True, can_restrict_members=True, can_invite_users=True, can_pin_messages=True, can_manage_voice_chats=True)
         await message.edit(
-            f"Successfully Promoted [{get_user.first_name}](tg://user?id={get_user.id}) with title {title}"
+            f"berhasil mempromosikan [{get_user.first_name}](tg://user?id={get_user.id}) dengan title {title}"
         )
 
     except Exception as e:
@@ -245,7 +245,7 @@ async def demote(client, message: Message):
             can_post_messages=False,
         )
         await message.edit(
-            f"Successfully Demoted [{get_user.first_name}](tg://user?id={get_user.id})"
+            f"berhasil menurunkan [{get_user.first_name}](tg://user?id={get_user.id})"
         )
     except Exception as e:
         await message.edit(f"{e}")
@@ -258,11 +258,11 @@ async def invite(client, message):
     else:
         user = get_arg(message)
         if not user:
-            await message.edit("**I can't invite no-one, can I?**")
+            await message.edit("**saya tidak bisa menambahkannya!**")
             return
     get_user = await app.get_users(user)
     try:
         await app.add_chat_members(message.chat.id, get_user.id)
-        await message.edit(f"Successfully added [{get_user.first_name}](tg://user?id={get_user.id}) to this chat")
+        await message.edit(f"berhasil menambahkan [{get_user.first_name}](tg://user?id={get_user.id}) ke dalam obrolan ini")
     except Exception as e:
         await message.edit(f"{e}")
