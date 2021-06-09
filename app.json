@@ -42,6 +42,11 @@
       "value": "",
       "required": false
     },
+    "MONGO_URI": {
+      "description": "This is for the database account, you can obtain it from mongodb.com.",
+      "value": "",
+      "required": true
+    },
     "LOG_CHAT": {
       "description": "Log Chat ID",
       "value": ""
