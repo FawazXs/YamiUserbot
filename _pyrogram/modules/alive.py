@@ -15,10 +15,10 @@ CMD_HELP.update(
     {
         "Alive": """
 **Alive**
-  `alive -p` -> For Checking Pyrogram Alive Status
-  `alive -t` -> For Checking Telethon Alive Status
-  `ping -p` -> For Pinging Pyrogram
-  `ping -t` -> For Pinging Telethon
+  `alive -p` -> Untuk mengecek status alive pyrogram
+  `alive -t` -> Untuk mengecek status alive telethon
+  `ping -p` -> Untuk mem-ping pyrogram
+  `ping -t` -> Untuk mem-ping telethon
 """
     }
 )
@@ -59,11 +59,11 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[Developer](https://github.com/TheCodents/DevelopersUserbot)**\n"
-    reply_msg += f"**Python Version:** `{__python_version__}`\n"
-    reply_msg += f"**Pyrogram Version:** `{__pyro_version__}`\n"
+    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n"
+    reply_msg += f"**VERSI PYTHON:** `{__python_version__}`\n"
+    reply_msg += f"**VERSI PYROGRAM:** `{__pyro_version__}`\n"
     end_time = time.time()
-    reply_msg += f"\nUptime: {uptime}"
+    reply_msg += f"\nUPTIME: {uptime}"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
@@ -74,4 +74,4 @@ async def pingme(_, message: Message):
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**[[Pyrogram]](https://docs.pyrogram.org)** \n**Ping Speed** **[DC-{app_info.dc_id}]**: `{m_s} ms`", disable_web_page_preview=True)
+    await message.edit(f"**[[PYROGRAM]](https://docs.pyrogram.org)** \n**⚡️ kecepatan** **[DC-{app_info.dc_id}]**: `{m_s} ms`", disable_web_page_preview=True)
