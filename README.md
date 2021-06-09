@@ -6,6 +6,9 @@
 <p align="center">
 <a href="#"><img title="Telegram-Userbot" src="https://img.shields.io/badge/Telegram%20Userbot-blue?colorA=%23ff0000&colorB=00BFFF&style=for-the-badge"></a>
 </p>
+<p align="center">
+<a href="https://github.com/levina-lab"><img title="Author" src="https://img.shields.io/badge/Author-levina-lab-darkblue.svg?style=for-the-badge&logo=github"></a>
+</p>
 <h4 align="center">userbot yang dibuat menggunakan bahasa python dan dijalankan dengan 2 base telethon dan pyrogram</h4>
 
 # PENJELESAN
