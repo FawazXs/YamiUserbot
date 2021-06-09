@@ -49,13 +49,12 @@ async def alive_t(event):
     end = datetime.now()
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[✨ VINA USERBOT ✨](https://github.com/levina-lab/vinauserbot)**\n\n"
-    reply_msg = f"**[🌸 DEVELOPER 🌸](https://t.me/dlwrml)**\n\n"
-    reply_msg += f"VERSI PYTHON: `{__python_version__}`\n"
-    reply_msg += f"VERSI PYROGRAM: `{__tele_version__}`\n"
-    reply_msg += f"VERSI USERBOT:**V.0.1**\n"
+    reply_msg = f"**[🌸 VINA USERBOT 🌸](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━"
+    reply_msg += f"┣• versi python: `{__python_version__}`\n"
+    reply_msg += f"┣• versi pyrogram: `{__tele_version__}`\n"
+    reply_msg += f"┣• versi userbot:**`0.1`**\n━━━━━━━━━━━━━━━━"
     end_time = time.time()
-    reply_msg += f"\nUPTIME: {uptime}"
+    reply_msg += f"\n📶 UPTIME: {uptime}"
     await event.edit(reply_msg)
 
 @app.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}ping (.*)"))
@@ -68,4 +67,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"<b><a href=https://docs.telethon.dev>[TELETHON BOT]</a><b/> \n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
+    await event.edit(f"<b><a href=https://docs.telethon.dev>[TELETHON BOT]•𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓</a><b/> \n\n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
