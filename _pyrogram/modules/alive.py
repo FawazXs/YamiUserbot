@@ -60,7 +60,7 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[۩▬▬𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓▬▬۩](https://github.com/levina-lab/vinauserbot)**\n\n━━━━━━━━━━━━━━━"
+    reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━\n"
     reply_msg += f"**┣• versi python:** `{__python_version__}`\n"
     reply_msg += f"**┣• versi pyrogram:** `{__pyro_version__}`\n"
     reply_msg += f"**┣• versi userbot:** `0.1`**\n"
