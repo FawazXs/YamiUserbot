@@ -14,11 +14,12 @@ from pyrogram import filters
 
 CMD_HELP.update(
     {
-        "Developer": """
-**Developer**
-  `peval` -> For Running Pyrogram Evaluations
-  `teval` -> For Running Telethon Evaluations
-  `sh` -> For Running commands in shell.
+        "developer": """
+**📕 MODUL DEVELOPER:**
+`━━━━━━━━━━━━━━━━━`
+`peval` ⇛ For Running Pyrogram Evaluations
+`teval` ⇛ For Running Telethon Evaluations
+`sh` ⇛ For Running commands in shell.
 """
     }
 )
@@ -34,7 +35,7 @@ async def aexec(code, client, message):
 
 @app.on_message(filters.command("peval", PREFIX) & filters.me)
 async def evaluate(client, message):
-    status_message = await message.edit("`Running ...`")
+    status_message = await message.edit("`Running...`")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
