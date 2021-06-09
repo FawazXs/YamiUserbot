@@ -2,6 +2,10 @@
 <p align="center">
 <img src="https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg" width="256" height="256"/>
 </p>
+
+<p align="center">
+<a href="#"><img title="Telegram-Userbot" src="https://img.shields.io/badge/Telegram%20Userbot-blue?colorA=%23ff0000&colorB=00BFFF&style=for-the-badge"></a>
+</p>
 <h4 align="center">userbot yang dibuat menggunakan bahasa python dan dijalankan dengan 2 base telethon dan pyrogram</h4>
 
 # PENJELESAN
