@@ -64,7 +64,7 @@ async def alive(_, m):
     reply_msg += f"**┣• versi python:** `{__python_version__}`\n"
     reply_msg += f"**┣• versi pyrogram:** `{__pyro_version__}`\n"
     reply_msg += f"**┣• versi userbot:** `0.1`**\n"
-    reply_msg += f"**┣• branch:** `Veez Project`**\n━━━━━━━━━━━━━━━"
+    reply_msg += f"**┣• branch:** `veez project`**\n━━━━━━━━━━━━━━━"
     end_time = time.time()
     reply_msg += f"\n📶 UPTIME: {uptime}"
     await m.delete()
