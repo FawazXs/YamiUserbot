@@ -25,5 +25,5 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 app.start()
-print("Telethon User Client Started \nPowered By @TheCodents\n(C) 2021 Jayant Kageri")
+print("Telethon User Client Started \nPowered By @levinachannel\n(C) 2021 Levina Shavila")
 app.run_until_disconnected()
