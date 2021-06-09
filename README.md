@@ -1,28 +1,28 @@
 <h1 align="center"><b>vina userbot</b></h1>
-<h4 align="center">A Telegram Lightweight Userbot for myself, who?, of course me, levina</h4>
+<h4 align="center">userbot yang dibuat menggunakan bahasa python dan dijalankan dengan 2 base telethon dan pyrogram</h4>
 
 # HELP CENTER
 ## Deploy
 
-### Deploy to Heroku [Recommended]
+### Deploy to Heroku [Direkomendasikan]
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot)
 
 ### Local Deploy
-- Fill the config.py with your Own Values
+- isi di file config.py dengan value milik mu.
 - Install Requirements by `pip3 install -r requirements.txt`
-- Open Terminal
-- In Terminal do `python3 main.py`
-- Done :)
+- Buka Terminal
+- Di Terminal Lakukan `python3 main.py`
+- Selesai :)
 
 ## Configuration
-- `API_ID` and `API_HASH` - Get API_ID and API_HASH from https://my.telegram.org
-- `TELETHON_SESSION` and `PYROGRAM_SESSION` - Get this by Running [this Repl](https://repl.it/@jayantkageri/StringSession#main.py)
-- `HEROKU_APP_NAME` [For Heroku Only] - The App Name that you putted in first in Heroku
-- `HEROKU_API` [For Heroku Only] - Get this from [here](https://dashboard.heroku.com/account)
-- `LOG_CHAT` - Create an Group and add [@MissEmiliaBot](https://telegram.me/MissEmilia_bot) and send `/id`
+- `API_ID` and `API_HASH` - Dapatkan API_ID and API_HASH dari https://my.telegram.org
+- `TELETHON_SESSION` dan `PYROGRAM_SESSION` - Dapatkan melalui [Repl.it](https://repl.it/@jayantkageri/StringSession#main.py)
+- `HEROKU_APP_NAME` [Hanya Untuk Heroku] - Isi dengan app name yang kamu isi di kolom pertama.
+- `HEROKU_API` [Hanya Untuk Heroku] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
+- `LOG_CHAT` - Buat grup, lalu masukin [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
 
 ## Support Group
-- Facing Problems in this? No Problem, Visit us in [@gcsupportbots](https://telegram.me/gcsupportbots)
+- Kalo ada masalah, Tanyakan di sini yah 👉 [@gcsupportbots](https://telegram.me/gcsupportbots)
 
 # LEGAL
 ## Credits
@@ -33,12 +33,12 @@
 - Thanks to [Aditya S](https://github.com/xditya)
 - Thanks to [Swanit](https://github.com/swatv3nub)
 - Thanks to [Sipak](https://github.com/ProgrammingError)
-- Thanks to [Me](https://github.com/jayantkageri)
+- Thanks to [Me](https://github.com/levina-lab)
 
 ## License
 ```
-    Devlopers Userbot, A Telegram Lightweight Userbot for Devlopers
-    Copyright (C) 2021 Jayant Kageri
+    Vina Userbot, A Telegram Lightweight Userbot for Developers
+    Copyright (C) 2021 Levina Shavila
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
