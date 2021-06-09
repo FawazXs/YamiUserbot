@@ -60,7 +60,7 @@ async def purge_message(client, message):
     time_taken_ms = (end_t - start_t).seconds
     ms_g = await client.send_message(
         message.chat.id,
-        f"Purged {count_del_etion_s} messages in {time_taken_ms} seconds",
+        f"berhasil menghapus {count_del_etion_s} pesan, dalam {time_taken_ms} detik",
     )
     await asyncio.sleep(5)
     await ms_g.delete()
