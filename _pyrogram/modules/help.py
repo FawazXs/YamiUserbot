@@ -9,13 +9,12 @@ from _pyrogram.helpers.pyrohelper import get_arg
 
 HELP.update(
     {
-        "**📘 ADMIN TOOLS**": "ban, unban, promote, demote, kick, mute, unmute, pin, purge, del, invite",
-        "**📘 ALIVE**": "alive, ping, (untuk ping & alive: p untuk pyrogram bot dan t untuk telethon bot)",
-        "**📘 DEVELOPER**": "peval, teval, sh",
-        "**📘 MISC**": "paste, tr, info, id",
-        "**📘 HEROKU**": "update, restart, logs",
-        "**📘 AFK**": "tandai dirimu bahwa sedang afk/offline",
-        "**📝 Ketik**":".help (nama module) untuk melihat penjelasan dari module tersebut.",
+        "**📚 module 1**": "admin tools: ban, unban, promote, demote, kick, mute, unmute, pin, purge, del, invite",
+        "**📚 module 2**": "alive, ping, (p untuk pyrogram bot dan t untuk telethon bot)",
+        "**📚 module 3**": "developer: peval, teval, sh",
+        "**📚 module 4**": "misc: paste, tr, info, id",
+        "**📚 module 5**": "heroku: update, restart, logs",
+        "**📝 notes**": "ketik .help (nama module) untuk melihat penjelasan dari module tersebut.",
     }
 )
 
@@ -24,7 +23,7 @@ HELP.update(
 async def help(client, message):
     args = get_arg(message)
     if not args:
-        text = "**📚 List module vina userbot:**\n\n"
+        text = "**━━━━━━ MODULE LIST ━━━━━━━━**\n\n"
         for key, value in HELP.items():
             text += f"{key}: {value}\n\n"
         await message.edit(text)
