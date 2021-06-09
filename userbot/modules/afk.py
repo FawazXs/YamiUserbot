@@ -17,8 +17,8 @@ from userbot.modules.dbhelper import afk, afk_reason, is_afk, no_afk
 @register(incoming=True, disable_edited=True, disable_errors=True)
 @grp_exclude()
 async def mention_afk(mention):
-    """This function takes care of notifying the
-    people who mention you that you are AFK."""
+    """fitur ini dapat anda gunakan untuk memberitahu
+    orang yang men-tag anda atau membalas pesan anda bahwa anda sedang afk."""
 
     global COUNT_MSG
     global USERS
@@ -29,7 +29,7 @@ async def mention_afk(mention):
         if IsAway is True:
             if mention.sender_id not in USERS:
                 await mention.reply(
-                    "Sorry! My boss is AFK due to "
+                    "maaf! boss saya sedang afk karena "
                     + await afk_reason()
                     + ". Would ping him to look into the message soon😉"
                 )
@@ -110,9 +110,9 @@ async def type_afk_is_not_true(notafk):
         return
     IsAway = await is_afk()
     if IsAway is True:
-        x = await notafk.respond("I'm no longer AFK.")
+        x = await notafk.respond("saya sudah tidak lagi afk.")
         y = await notafk.respond(
-            "`You recieved "
+            "`kamu menerima "
             + str(COUNT_MSG)
             + " messages while you were away. Check log for more details.`"
             + " `This auto-generated message "
