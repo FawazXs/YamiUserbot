@@ -1,8 +1,10 @@
 <h1 align="center"><b>vina userbot</b></h1>
 <h4 align="center">userbot yang dibuat menggunakan bahasa python dan dijalankan dengan 2 base telethon dan pyrogram</h4>
 
-# HELP CENTER
-## Deploy
+# PENJELESAN
+dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun secara local, silahkan dipilih yang mana yang gampang. Repo ini juga masih rilis tahap awal, dan masih banyak yang harus di kembangkan, jika ingin berkontribusi di persilahkan.
+
+## Deploy Userbot
 
 ### Deploy to Heroku [Direkomendasikan]
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot)
