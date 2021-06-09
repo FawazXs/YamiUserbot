@@ -26,11 +26,11 @@ def ReplyCheck(message: Message):
 
 
 infotext = (
-    "**[{full_name}](tg://user?id={user_id})**\n"
-    "    ➠ ID pengguna: `{user_id}`\n"
-    "    ➠ Nama depan: `{first_name}`\n"
-    "    ➠ Nama belakang: `{last_name}`\n"
-    "    ➠ Username: @{username}\n"
+    "**🕵️‍♀️ [{full_name}](tg://user?id={user_id})**\n\n"
+    " ➠ ID pengguna: `{user_id}`\n"
+    " ➠ Nama depan: `{first_name}`\n"
+    " ➠ Nama belakang: `{last_name}`\n"
+    " ➠ Username: @{username}\n"
 )
 
 
