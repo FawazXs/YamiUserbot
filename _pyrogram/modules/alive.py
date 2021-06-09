@@ -16,10 +16,10 @@ CMD_HELP.update(
         "Alive": """
 **📕 MODUL ALIVE:**
 `━━━━━━━━━━━━━━━━━`
- `alivep` -> Untuk mengecek status alive pyrogram bot.
- `alivet` -> Untuk mengecek status alive telethon bot.
- `ping-p` -> Untuk mem-ping pyrogram bot.
- `ping-t` -> Untuk mem-ping telethon bot.
+ `alive p` -> Untuk mengecek status alive pyrogram bot.
+ `alive t` -> Untuk mengecek status alive telethon bot.
+ `ping p` -> Untuk mem-ping pyrogram bot.
+ `ping t` -> Untuk mem-ping telethon bot.
 """
     }
 )
@@ -56,7 +56,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@app.on_message(filters.command("alivep", PREFIX) & filters.me)
+@app.on_message(filters.command("alive p", PREFIX) & filters.me)
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
@@ -71,7 +71,7 @@ async def alive(_, m):
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
 
-@app.on_message(filters.command("ping-p", PREFIX) & filters.me)
+@app.on_message(filters.command("ping p", PREFIX) & filters.me)
 async def pingme(_, message: Message):
     app_info = await app.get_me()
     start = datetime.now()
