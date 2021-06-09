@@ -1,11 +1,11 @@
-<h1 align="center"><b>Devlopers Userbot</b></h1>
-<h4 align="center">A Telegram Lightweight Userbot for Devlopers</h4>
+<h1 align="center"><b>vina userbot</b></h1>
+<h4 align="center">A Telegram Lightweight Userbot for myself, who?, of course me, levina</h4>
 
 # HELP CENTER
 ## Deploy
 
 ### Deploy to Heroku [Recommended]
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/TheCodents/DevelopersUserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot)
 
 ### Local Deploy
 - Fill the config.py with your Own Values
@@ -22,7 +22,7 @@
 - `LOG_CHAT` - Create an Group and add [@MissEmiliaBot](https://telegram.me/MissEmilia_bot) and send `/id`
 
 ## Support Group
-- Facing Problems in this? No Problem, Visit us in [@TheCodentsSupport](https://telegram.me/TheCodentsSupport)
+- Facing Problems in this? No Problem, Visit us in [@gcsupportbots](https://telegram.me/gcsupportbots)
 
 # LEGAL
 ## Credits
