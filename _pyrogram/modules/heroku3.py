@@ -55,12 +55,12 @@ async def updateme_requirements():
 
 @app.on_message(filters.command("update", PREFIX) & filters.me)
 async def upstream(client, message):
-    status = await message.edit("`Checking for updates, please wait....`")
+    status = await message.edit("`⏳ mengecek pembaruan, tunggu sebentar...`")
     conf = get_arg(message)
     off_repo = UPSTREAM_REPO_URL
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`oopss, update tidak dapat dilakukan karena "
+        txt += "terjadi beberapa masalah`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await status.edit(f"{txt}\n`directory {error} is not found`")
@@ -95,27 +95,27 @@ async def upstream(client, message):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if "now" not in conf:
         if changelog:
-            changelog_str = f"**New UPDATE available for [[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br}):\n\nCHANGELOG**\n\n{changelog}"
+            changelog_str = f"**update baru tersedia: [[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br}):\n\nCHANGELOG**\n\n{changelog}"
             if len(changelog_str) > 4096:
-                await status.edit("`Changelog is too big, view the file to see it.`")
+                await status.edit("`Changelog terlalu besar, lihat file untuk melihatnya.`")
                 file = open("output.txt", "w+")
                 file.write(changelog_str)
                 file.close()
                 await app.send_document(
                     message.chat.id,
                     "output.txt",
-                    caption=f"Do {PREFIX}`update now` to update.",
+                    caption=f"Ketik {PREFIX}`update now` untuk memperbarui userbot.",
                     reply_to_message_id=status.message_id,
                 )
                 remove("output.txt")
             else:
                 return await status.edit(
-                    f"{changelog_str}\n\nDo `.update now` to update.",
+                    f"{changelog_str}\n\nKetik `.update now` untuk memperbarui userbot.",
                     disable_web_page_preview=True,
                 )
         else:
             await status.edit(
-                f"\n`Your BOT is`  **up-to-date**  `with`  **[[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br})**\n",
+                f"\n`userbot anda sudah`  **versi terbaru**  `with`  **[[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br})**\n",
                 disable_web_page_preview=True,
             )
             repo.__del__()
@@ -128,7 +128,7 @@ async def upstream(client, message):
         heroku_applications = heroku.apps()
         if not HEROKU_APP_NAME:
             await status.edit(
-                "`Please set up the HEROKU_APP_NAME variable to be able to update userbot.`"
+                "`mohon atur HEROKU_APP_NAME variable untuk dapat memperbarui userbot.`"
             )
             repo.__del__()
             return
@@ -159,7 +159,7 @@ async def upstream(client, message):
             remote.push(refspec=f"HEAD:refs/heads/{ac_br}", force=True)
         except GitCommandError as error:
             pass
-        await status.edit("`Successfully Updated!\nRestarting, please wait...`")
+        await status.edit("`Berhasil Memperbarui!\nRestarting, mohon tunggu...`")
     else:
         # Classic Updater, pretty straightforward.
         try:
@@ -168,7 +168,7 @@ async def upstream(client, message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`Successfully Updated!\nBot is restarting... Wait for a second!`",
+            "`Berhasil Memperbarui!\nBot dimulai ulang... tunggu beberapa saat!`",
         )
         # Spin a new instance of bot
         args = [sys.executable, "./resources/startup/deploy.sh"]
@@ -178,12 +178,12 @@ async def upstream(client, message):
 @app.on_message(filters.command("restart", PREFIX) & filters.me)
 async def restart(client, message):
     try:
-        await message.edit("Restarting your Userbot, It will take few minutes, Please Wait")
+        await message.edit("Memulai ulang userbot anda, ini akan memakan waktu beberapa menit, mohon tunggu")
         heroku_conn = heroku3.from_key(HEROKU_API)
         server = heroku_conn.app(HEROKU_APP_NAME)
         server.restart()
     except Exception as e:
-        await message.edit(f"Your `HEROKU_APP_NAME` or `HEROKU_API` is Wrong or Not Filled, Please Make it correct or fill it \n\nError: ```{e}```")
+        await message.edit(f"Hei!! `HEROKU_APP_NAME` & `HEROKU_API` tidak di isi dengan benar, mohon di cek dan di perbaiki \n\nError: ```{e}```")
 
 
 @app.on_message(filters.command("logs", PREFIX) & filters.me)
