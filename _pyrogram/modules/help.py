@@ -14,6 +14,7 @@ HELP.update(
         "**📘 DEVELOPER**": "peval, teval, sh",
         "**📘 MISC**": "paste, tr, info, id",
         "**📘 HEROKU**": "update, restart, logs",
+        "**📘 AFK**": "tandai dirimu bahwa sedang afk/offline",
         "**📝 Ketik**":".help (nama module) untuk melihat penjelasan dari module tersebut.",
     }
 )
