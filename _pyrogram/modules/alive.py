@@ -14,11 +14,12 @@ from pyrogram.types import Message
 CMD_HELP.update(
     {
         "Alive": """
-**Alive**
-  `alive -p` -> Untuk mengecek status alive pyrogram
-  `alive -t` -> Untuk mengecek status alive telethon
-  `ping -p` -> Untuk mem-ping pyrogram
-  `ping -t` -> Untuk mem-ping telethon
+**📕 MODUL ALIVE:**
+`━━━━━━━━━━━━━━━━━`
+ `alivep` -> Untuk mengecek status alive pyrogram bot.
+ `alivet` -> Untuk mengecek status alive telethon bot.
+ `ping-p` -> Untuk mem-ping pyrogram bot.
+ `ping-t` -> Untuk mem-ping telethon bot.
 """
     }
 )
@@ -55,24 +56,25 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@app.on_message(filters.command("alive -p", PREFIX) & filters.me)
+@app.on_message(filters.command("alivep", PREFIX) & filters.me)
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[🌸 VINA USERBOT 🌸](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━"
+    reply_msg = f"**[۩▬▬𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓▬▬۩](https://github.com/levina-lab/vinauserbot)**\n\n━━━━━━━━━━━━━━━"
     reply_msg += f"**┣• versi python:** `{__python_version__}`\n"
     reply_msg += f"**┣• versi pyrogram:** `{__pyro_version__}`\n"
-    reply_msg += f"**┣• versi userbot:**`0.1`**\n━━━━━━━━━━━━━━"
+    reply_msg += f"**┣• versi userbot:** `0.1`**\n"
+    reply_msg += f"**┣• branch:** `Veez Project`**\n━━━━━━━━━━━━━━━"
     end_time = time.time()
     reply_msg += f"\n📶 UPTIME: {uptime}"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
 
-@app.on_message(filters.command("ping -p", PREFIX) & filters.me)
+@app.on_message(filters.command("ping-p", PREFIX) & filters.me)
 async def pingme(_, message: Message):
     app_info = await app.get_me()
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**[[PYROGRAM BOT]](https://docs.pyrogram.org)** \n**⚡️ kecepatan** **[DC-{app_info.dc_id}]**: `{m_s} ms`", disable_web_page_preview=True)
+    await message.edit(f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓** \n\n**⚡️ kecepatan**: `{m_s} ms`", disable_web_page_preview=True)
