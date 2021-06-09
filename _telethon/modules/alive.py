@@ -49,11 +49,11 @@ async def alive_t(event):
     end = datetime.now()
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[Developer](https://github.com/TheCodents/DevelopersUserbot)**\n"
-    reply_msg += f"Python Version: `{__python_version__}`\n"
-    reply_msg += f"Telethon Version: `{__tele_version__}`\n"
+    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n"
+    reply_msg += f"VERSI PYTHON: `{__python_version__}`\n"
+    reply_msg += f"VERSI PYROGRAM: `{__tele_version__}`\n"
     end_time = time.time()
-    reply_msg += f"\nUptime: {uptime}"
+    reply_msg += f"\nUPTIME: {uptime}"
     await event.edit(reply_msg)
 
 @app.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}ping (.*)"))
@@ -66,4 +66,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"<b><a href=https://docs.telethon.dev>[Telethon]</a><b/> \n<b>Ping Speed<b/>: <code>{ms} ms</code>", parse_mode="html")
+    await event.edit(f"<b><a href=https://docs.telethon.dev>[TELETHON]</a><b/> \n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
