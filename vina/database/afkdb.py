@@ -9,7 +9,7 @@
 from . import cli
 import asyncio
 
-collection = cli["Zect"]["afk"]
+collection = cli["vina"]["afk"]
 
 
 async def set_afk(afk_status, afk_since, reason):
