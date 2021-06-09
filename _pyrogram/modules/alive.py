@@ -11,6 +11,16 @@ from sys import version_info
 from pyrogram import __version__ as __pyro_version__
 from pyrogram.types import Message
 
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+
+
+@Client.on_message(
+    filters.command("alive -p")
+    & filters.private
+    & ~ filters.edited
+)
+
 CMD_HELP.update(
     {
         "Alive": """
@@ -55,7 +65,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@app.on_message(filters.command("alive -p", PREFIX) & filters.me)
+@Client.on_message(filters.command("alive -p", PREFIX) & filters.me)
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
@@ -64,7 +74,23 @@ async def alive(_, m):
     reply_msg += f"**VERSI PYTHON:** `{__python_version__}`\n"
     reply_msg += f"**VERSI PYROGRAM:** `{__pyro_version__}`\n"
     end_time = time.time()
-    reply_msg += f"\nUPTIME: {uptime}"
+    reply_msg += f"\nUPTIME: {uptime}",
+    
+        reply_markup=InlineKeyboardMarkup(
+            [ 
+                [
+                    InlineKeyboardButton(
+                        "📣 CHANNEL", url="https://t.me/levinachannel")
+                  ],[
+                    InlineKeyboardButton(
+                        "💬 GROUP", url="https://t.me/gcsupportbots"
+                    ),
+                    InlineKeyboardButton(
+                        "🌸 OWNER", url="https://t.me/dlwrml"
+                    )
+                ]
+            ]
+        ),
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
