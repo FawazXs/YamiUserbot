@@ -50,9 +50,10 @@ async def alive_t(event):
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"**[✨ VINA USERBOT ✨](https://github.com/levina-lab/vinauserbot)**\n\n"
-    reply_msg = f"**[🌸 PEMBUAT 🌸](https://t.me/dlwrml)**\n\n"
+    reply_msg = f"**[🌸 DEVELOPER 🌸](https://t.me/dlwrml)**\n\n"
     reply_msg += f"VERSI PYTHON: `{__python_version__}`\n"
     reply_msg += f"VERSI PYROGRAM: `{__tele_version__}`\n"
+    reply_msg += f"VERSI USERBOT:**V.0.1**\n"
     end_time = time.time()
     reply_msg += f"\nUPTIME: {uptime}"
     await event.edit(reply_msg)
