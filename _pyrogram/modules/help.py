@@ -14,7 +14,7 @@ HELP.update(
         "**📘 DEVELOPER**": "peval, teval, sh",
         "**📘 MISC**": "paste, tr, info, id",
         "**📘 HEROKU**": "update, restart, logs",
-        "**📝 Ketik .help (nama module) untuk melihat penjelasan dari module tersebut.",
+        "**📝 Ketik**"."help (nama module) untuk melihat penjelasan dari module tersebut.",
     }
 )
 
