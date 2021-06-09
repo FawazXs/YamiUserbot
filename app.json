@@ -1,6 +1,6 @@
 {
-  "name": "Developer Userbot",
-  "description": "Userbot for Developers",
+  "name": "vina userbot",
+  "description": "userbot untuk bersenang senang",
   "keywords": [
     "telegram",
     "developer",
@@ -14,7 +14,7 @@
     "pyrogram",
     "telethon"
   ],
-  "repository": "https://github.com/TheCodents/DevloperUserbot",
+  "repository": "https://github.com/levina-lab/vinauserbot",
   "website": "jayantkageri.ml",
   "success_url": "jayantkageri.ml",
   "stack": "heroku-20",
