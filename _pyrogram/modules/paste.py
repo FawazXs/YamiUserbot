@@ -16,7 +16,7 @@ CMD_HELP.update(
         "Misc": """
 **Misc**
   `paste` -> Paste replied content to nekobin.com.
-  `tr` [lang code] -> Transalte a text to a given language.
+  `tr` [lang code] -> Translate a text to a given language.
   `info` [user handle] -> Provides information about the user.
   `id` [user handle] -> Give user or chat id
   `restart` -> Restart the Clients
@@ -49,11 +49,11 @@ async def pastebin(_, message):
     # elif len(message.command) > 1:
     #     downloaded_file_name = " ".join(message.command[1:])
     else:
-        await message.edit("Not said What to do")
+        await message.edit("Tidak mengatakan Apa yang harus dilakukan")
         return
 
     if downloaded_file_name is None:
-        await message.edit("Didn't say what to do")
+        await message.edit("Tidak mengatakan apa yang harus dilakukan")
         return
 
     json_paste_data = {
@@ -94,7 +94,7 @@ async def pastebin(_, message):
         t_w_attempt, sort_keys=True, indent=4
     ) + "\n\n #ERROR"
     if t_w_attempt is not None:
-        required_url = "**Patsted to Nekobin**\n" + paste_store_base_url + "/" + "raw" + "/" + t_w_attempt
+        required_url = "**Pasted To NekoBin**\n" + paste_store_base_url + "/" + "raw" + "/" + t_w_attempt
 
     await message.edit(required_url)
 
