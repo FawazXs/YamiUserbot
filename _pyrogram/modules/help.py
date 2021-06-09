@@ -9,11 +9,11 @@ from _pyrogram.helpers.pyrohelper import get_arg
 
 HELP.update(
     {
-        "**Admin Tools**": "ban, unban, promote, demote, kick, mute, unmute, pin, purge, del, invite",
-        "**Alive**": "alive, ping",
-        "**Developer**": "peval, teval, sh",
-        "**Misc**": "paste, tr, info, id",
-        "**Heroku**": "update, restart, logs",
+        "**ADMIN TOOLS**": "ban, unban, promote, demote, kick, mute, unmute, pin, purge, del, invite",
+        "**ALIVE**": "alive, ping",
+        "**DEVELOPER**": "peval, teval, sh",
+        "**MISC**": "paste, tr, info, id",
+        "**HEROKU**": "update, restart, logs",
     }
 )
 
@@ -22,7 +22,7 @@ HELP.update(
 async def help(client, message):
     args = get_arg(message)
     if not args:
-        text = "**Available Commands**\n\n"
+        text = "**📚 Daftar Command**\n\n"
         for key, value in HELP.items():
             text += f"{key}: {value}\n\n"
         await message.edit(text)
