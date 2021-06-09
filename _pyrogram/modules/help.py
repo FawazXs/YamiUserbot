@@ -14,6 +14,8 @@ HELP.update(
         "**DEVELOPER**": "peval, teval, sh",
         "**MISC**": "paste, tr, info, id",
         "**HEROKU**": "update, restart, logs",
+        
+        "© @levinachannel",
     }
 )
 
