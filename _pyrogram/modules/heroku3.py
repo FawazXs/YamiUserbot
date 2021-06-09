@@ -18,10 +18,11 @@ from _pyrogram.helpers.pyrohelper import get_arg
 CMD_HELP.update(
     {
         "Heroku": """
-**Heroku**
-  `update`-> Updates the userbot to latest build.
-  `restart` -> To Restart the Userbot
-  `logs` -> To Get Heroku Logs"""
+**📕 MODULE HEROKU:**
+`━━━━━━━━━━━━━━━━━━━`
+ `update` -> Memeriksa pembaruan & memperbarui userbot anda.
+ `restart` -> Mulai ulang userbot anda.
+ `logs` -> Mendapatkan log heroku"""
     }
 )
 
@@ -33,7 +34,7 @@ requirements_path = path.join(
 
 async def gen_chlog(repo, diff):
     ch_log = ""
-    d_form = "On %d/%m/%y at %H:%M:%S"
+    d_form = "on %d/%m/%y at %H:%M:%S"
     for c in repo.iter_commits(diff):
         ch_log += f"**#{c.count()}** : {c.committed_datetime.strftime(d_form)} : [{c.summary}]({UPSTREAM_REPO_URL.rstrip('/')}/commit/{c}) by `{c.author}`\n"
     return ch_log
@@ -95,7 +96,7 @@ async def upstream(client, message):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if "now" not in conf:
         if changelog:
-            changelog_str = f"**update baru tersedia: [[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br}):\n\nCHANGELOG**\n\n{changelog}"
+            changelog_str = f"**update tersedia: [[{ac_br}]]({UPSTREAM_REPO_URL}/tree/{ac_br}):\n\nCHANGELOG**\n\n{changelog}"
             if len(changelog_str) > 4096:
                 await status.edit("`Changelog terlalu besar, lihat file untuk melihatnya.`")
                 file = open("output.txt", "w+")
@@ -159,7 +160,7 @@ async def upstream(client, message):
             remote.push(refspec=f"HEAD:refs/heads/{ac_br}", force=True)
         except GitCommandError as error:
             pass
-        await status.edit("`Berhasil Memperbarui!\nRestarting, mohon tunggu...`")
+        await status.edit("`pembaruan selesai!\n\nrestarting, mohon tunggu...`")
     else:
         # Classic Updater, pretty straightforward.
         try:
@@ -168,7 +169,7 @@ async def upstream(client, message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`Berhasil Memperbarui!\nBot dimulai ulang... tunggu beberapa saat!`",
+            "`berhasil memperbarui!\n\nbot dimulai ulang, tunggu beberapa saat...`",
         )
         # Spin a new instance of bot
         args = [sys.executable, "./resources/startup/deploy.sh"]
@@ -178,7 +179,7 @@ async def upstream(client, message):
 @app.on_message(filters.command("restart", PREFIX) & filters.me)
 async def restart(client, message):
     try:
-        await message.edit("Memulai ulang userbot anda, ini akan memakan waktu beberapa menit, mohon tunggu")
+        await message.edit("memulai ulang userbot anda, ini akan memakan waktu beberapa menit, mohon tunggu")
         heroku_conn = heroku3.from_key(HEROKU_API)
         server = heroku_conn.app(HEROKU_APP_NAME)
         server.restart()
