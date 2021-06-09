@@ -23,7 +23,7 @@ async def translate(_client, message):
         message.reply_to_message.text or message.reply_to_message.caption
     ):
         if len(message.text.split()) == 1:
-            await edrep(message, text="Usage: Reply to a message, then `tr <lang>`")
+            await edrep(message, text="Usage: balas ke pesan, lalu ketik `tr <lang>`")
             return
         target = message.text.split()[1]
         if message.reply_to_message.text:
@@ -51,5 +51,5 @@ async def translate(_client, message):
 
     await edrep(
         message,
-        text=f"Translated from `{detectlang[0]}` to `{target}`:\n```{tekstr}```",
+        text=f"di translate dari `{detectlang[0]}` ke `{target}`:\n```{tekstr}```",
     )
