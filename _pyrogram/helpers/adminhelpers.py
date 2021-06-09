@@ -6,7 +6,7 @@ from _pyrogram import app
 
 
 async def CheckAdmin(message: Message):
-    """Check if we are an admin."""
+    """pastikan jika anda adalah admin."""
     admin = "administrator"
     creator = "creator"
     ranks = [admin, creator]
@@ -16,7 +16,7 @@ async def CheckAdmin(message: Message):
     )
 
     if SELF.status not in ranks:
-        await message.edit("__I'm not Admin!__")
+        await message.edit("__saya bukan admin!__")
         sleep(2)
         await message.delete()
 
@@ -24,6 +24,6 @@ async def CheckAdmin(message: Message):
         if SELF.status is not admin or SELF.can_restrict_members:
             return True
         else:
-            await message.edit("__No Permissions to restrict Members__")
+            await message.edit("__tidak punya izin untuk membatasi anggota__")
             sleep(2)
             await message.delete()
