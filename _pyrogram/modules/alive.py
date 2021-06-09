@@ -63,14 +63,14 @@ async def alive(_, m):
     reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://t.me/levinachannel)**\n━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**➠ versi python:** `{__python_version__}`\n"
     reply_msg += f"**➠ versi pyrogram:** `{__pyro_version__}`\n"
-    reply_msg += f"**➠ versi userbot:** `0.1`**\n"
-    reply_msg += f"\n**➠ repository:""[veez userbot](https://github.com/levina-lab/vinauserbot)""\n"
+    reply_msg += f"**➠ versi userbot:** `0.1`**\n\n"
+    reply_msg += f"**➠ repository:""[veez userbot](https://github.com/levina-lab/vinauserbot)""\n"
     reply_msg += f"**➠ commands:** `23 commands`**\n"
     reply_msg += f"**➠ module:** `5 module`**\n"
     reply_msg += f"**➠ branch:** `veez project`**\n"
     reply_msg += f"**➠ owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`**\n━━━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
-    reply_msg += f"\n📶 UPTIME: {uptime}\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg += f"\n📶 BOT UPTIME: {uptime}\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[DEVELOPER](https://t.me/dlwrml)``**\n"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
