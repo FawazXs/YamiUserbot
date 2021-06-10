@@ -1,4 +1,3 @@
-import humanize
 from requirements.txt import humanize
 from _pyrogram import app, CMD_HELP
 from pyrogram import filters
