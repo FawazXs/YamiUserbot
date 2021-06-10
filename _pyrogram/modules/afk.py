@@ -2,6 +2,7 @@ from requirements.txt import humanize
 from _pyrogram import app, CMD_HELP
 from pyrogram import filters
 from pyrogram.types import Message
+from config import PREFIX
 
 AFK = False
 AFK_REASON = ""
