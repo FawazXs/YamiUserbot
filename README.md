@@ -46,11 +46,11 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku.
 - Thanks to [Satwik](https://github.com/okay-retard) for his [Zect Userbot](https://github.com/okay-retard/ZectUserbot)
 - Thanks to [Dan Tès](https://github.com/delivrance) for his [Pyrogram](https://docs.pyrogram.org)
 - Thanks to [Lonami](https://github.com/lonami/) for his [Telethon](https://docs.telethon.dev)
+- Thanks to [Jayant Hegde Kageri](https://github.com/jayantkageri)
 - Thanks to [Shrimadhv UK](https://github.com/SpEcHiDe)
 - Thanks to [Aditya S](https://github.com/xditya)
 - Thanks to [Swanit](https://github.com/swatv3nub)
 - Thanks to [Sipak](https://github.com/ProgrammingError)
-- Thanks to [Me](https://github.com/levina-lab)
 
 ## License
 ```
