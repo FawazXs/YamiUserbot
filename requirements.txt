@@ -11,3 +11,4 @@ google_trans_new
 dnspython
 requests
 pillow
+humanize
