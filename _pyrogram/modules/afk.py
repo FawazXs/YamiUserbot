@@ -4,6 +4,17 @@ from pyrogram.types import Message
 AFK = False
 AFK_REASON = ""
 
+CMD_HELP.update(
+    {
+        "afk": """
+**📕 MODULE AFK:**
+`━━━━━━━━━━━`
+`afk (alasan)` ⇛ Tandai dirimu sedang afk atau offline.
+"""
+    }
+)
+
+
 @app.on_message(
     ((filters.group & filters.mentioned) | filters.private) & ~filters.me & ~filters.service, group=3
 )
