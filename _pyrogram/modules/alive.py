@@ -61,17 +61,17 @@ async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"**➠ versi python:** `{__python_version__}`\n"
-    reply_msg += f"**➠ versi pyrogram:** `{__pyro_version__}`\n"
-    reply_msg += f"**➠ versi userbot:** `0.1`\n"
-    reply_msg += f"**➠ project name:** `veez project`\n"
-    reply_msg += f"**➠ database:** `functioning`\n"
-    reply_msg += f"**➠ commands:** `25 commands`\n"
-    reply_msg += f"**➠ module:** `6 module`\n"
-    reply_msg += f"**➠ branch:** `master`\n"
-    reply_msg += f"**➠ owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`\n━━━━━━━━━━━━━━━━━━━━━━"
+    reply_msg += f"**➠ versi python` ` `:** `{__python_version__}`\n"
+    reply_msg += f"**➠ versi pyrogram` `:** `{__pyro_version__}`\n"
+    reply_msg += f"**➠ versi userbot`  `:** `0.1`\n"
+    reply_msg += f"**➠ project name` ` `:** `veez project`\n"
+    reply_msg += f"**➠ database` ` ` ` `:** `functioning`\n"
+    reply_msg += f"**➠ commands` ` ` ` `:** `25 commands`\n"
+    reply_msg += f"**➠ module` ` ` ` ` `:** `6 module`\n"
+    reply_msg += f"**➠ branch` ` ` ` ` `:** `master`\n"
+    reply_msg += f"**➠ owner` ` ` ` ` ` :** `𝕃𝔼𝕍𝕀ℕ𝔸`\n━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
-    reply_msg += f"\n📶 bot uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg += f"\n📶 bot uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)``**\n"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
@@ -85,4 +85,4 @@ async def pingme(_, message: Message):
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓** \n\n**⚡️ kecepatan**: `{m_s} ms`\n**🆙 uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`", disable_web_page_preview=True)
+    await message.edit(f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓** \n\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`", disable_web_page_preview=True)
