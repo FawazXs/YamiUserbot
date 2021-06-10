@@ -80,6 +80,8 @@ async def alive(_, m):
 @app.on_message(filters.command("ping p", PREFIX) & filters.me)
 async def pingme(_, message: Message):
     app_info = await app.get_me()
+    start_time = time.time()
+    uptime = get_readable_time((time.time() - StartTime))
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
