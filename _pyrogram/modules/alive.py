@@ -63,7 +63,7 @@ async def alive(_, m):
     reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://t.me/levinachannel)**\n━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**➠ versi python:** `{__python_version__}`\n"
     reply_msg += f"**➠ versi pyrogram:** `{__pyro_version__}`\n"
-    reply_msg += f"**➠ versi userbot:** `0.1`**\n"
+    reply_msg += f"**➠ versi userbot:** `0.1`**""\n"
     reply_msg += f"**➠ project name:** `veez project`**\n"
     reply_msg += f"**➠ repository:**[veez userbot](https://github.com/levina-lab/vinauserbot)**\n"
     reply_msg += f"**➠ commands:** `23 commands`**\n"
