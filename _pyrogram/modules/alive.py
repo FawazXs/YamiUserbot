@@ -1,4 +1,5 @@
-# (C) 2021, Jayant Kageri
+# (C) 2021, Levina Shavila
+import os
 
 from config import PREFIX
 import asyncio
@@ -8,6 +9,7 @@ from pyrogram import filters
 from _pyrogram import app, StartTime, CMD_HELP
 from sys import version_info
 
+from config import ALIVE_PIC, PM_IMG
 from pyrogram import __version__ as __pyro_version__
 from pyrogram.types import Message
 
@@ -55,6 +57,11 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+if ALIVE_PIC is None:
+    PM_iMG = "https://telegra.ph/file/f9f1d48988f2a98f2b510.jpg"
+else:
+    PM_iMG = ALIVE_PIC
 
 @app.on_message(filters.command("alive p", PREFIX) & filters.me)
 async def alive(_, m):
