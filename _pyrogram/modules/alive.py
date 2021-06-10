@@ -67,7 +67,7 @@ async def alive(_, m):
     reply_msg += f"**➠ project name:** `veez project`**\n"
     reply_msg += f"**➠ database:** `functioning`**\n"
     reply_msg += f"**➠ commands:** `25 commands`**\n"
-    reply_msg += f"**➠ module:** `5 module`**\n"
+    reply_msg += f"**➠ module:** `6 module`**\n"
     reply_msg += f"**➠ branch:** `master`**\n"
     reply_msg += f"**➠ owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`**\n━━━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
