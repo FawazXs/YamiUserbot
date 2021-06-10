@@ -1,6 +1,6 @@
-# This file is Originally Written By @okay-retard and @jayantkageri on GitHub
-# The Author (Jayant Kageri) just Ported this for Devloper Userbot
-# (C) 2021 Jayant Kageri
+# This file is Originally Written By @okay-retard and @jayantkageri and @levina-lab on GitHub
+# The Author (Levina) just Ported this for Veez Userbot
+# (C) 2021 Levina Shavila
 
 import time
 import asyncio
