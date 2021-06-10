@@ -17,8 +17,9 @@ from config import PREFIX
 
 CMD_HELP.update(
     {
-        "Admin Tools": """
- **Admin Tools** 
+        "admin tools": """
+ **📕 MODULE ADMIN TOOLS:**
+ `━━━━━━━━━━━━━━━━━━
   `ban` -> Banned anggota secara permanent.
   `unban` -> Unban anggota yang dibanned.
   `promote` [title] -> Promosikan anggota jadi admin.
