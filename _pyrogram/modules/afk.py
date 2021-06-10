@@ -1,3 +1,4 @@
+from _pyrogram import app, CMD_HELP
 from pyrogram import filters
 from pyrogram.types import Message
 
