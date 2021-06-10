@@ -14,6 +14,7 @@ HELP.update(
         "**📚 module 3**": "developer: peval, teval, sh",
         "**📚 module 4**": "misc: paste, tr, info, id",
         "**📚 module 5**": "heroku: update, restart, logs",
+        "**📚 module 6**": "afk, offline, (afk: tandai bahwa anda sedang offline)",
         "**📝 notes**": "ketik .help (nama module) untuk melihat penjelasan dari module tersebut.",
     }
 )
