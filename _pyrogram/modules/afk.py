@@ -14,11 +14,11 @@ async def collect_afk_messages(_, message: Message):
         is_group = True if message.chat.type in ["supergroup", "group"] else False
         CHAT_TYPE = GROUPS if is_group else USERUSER
         text = (
-            f"`Beep boop. This is an automated message.\n"
-            f"I am not available right now.\n"
-            f"Last seen: {last_seen}\n"
-            f"Reason: ```{AFK_REASON.upper()}```\n"
-            f"See you after I'm done doing whatever I'm doing.`"
+            f"`haii, ini adalah pesan otomatis.\n"
+            f"saat ini saya sedang offline, hubungi lagi nanti.\n"
+            f"last seen: {last_seen}\n"
+            f"alasan: ```{AFK_REASON.upper()}```\n"
+            f"saya akan kembali online setelah selesai menyelesaikan urusan ku ☺.`"
         )
         await message._client.send_message(
             chat_id=GetChatID(message),
