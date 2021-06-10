@@ -13,7 +13,7 @@ CMD_HELP.update(
     {
         "afk": """
 **📕 MODULE AFK:**
-`━━━━━━━━━━━`
+`━━━━━━━━━━━━━`
 `afk (alasan)` ⇛ Tandai dirimu sedang afk atau offline.
 """
     }
