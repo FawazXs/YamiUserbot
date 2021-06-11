@@ -83,7 +83,7 @@ async def alive(_, m):
             caption=reply_msg,
             reply_to_message_id=m.reply_to_message.message_id,
         )
-        else:
+    else:
         await app.send_photo(m.chat.id, photo, caption=reply_msg, disable_web_page_preview=True)
 
 
