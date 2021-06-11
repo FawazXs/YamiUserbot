@@ -144,7 +144,7 @@ async def upstream(client, message):
             repo.__del__()
             return
         await status.edit(
-            "`Userbot dyno build in progress, please wait for it to complete.`"
+            "`proses pembaruan veez userbot sedang berjalan, tunggu beberapa saat...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -160,7 +160,7 @@ async def upstream(client, message):
             remote.push(refspec=f"HEAD:refs/heads/{ac_br}", force=True)
         except GitCommandError as error:
             pass
-        await status.edit("`pembaruan selesai!\n\nrestarting, mohon tunggu...`")
+        await status.edit("`pembaruan selesai!\n\nuserbot di mulai ulang, ketik .ping p atau .alive p untuk mengetahui jika bot sudah hidup kembali.`")
     else:
         # Classic Updater, pretty straightforward.
         try:
@@ -169,7 +169,7 @@ async def upstream(client, message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`berhasil memperbarui!\n\nbot dimulai ulang, tunggu beberapa saat...`",
+            "`berhasil memperbarui!\n\nbot dimulai ulang, ketik .ping p untuk melihat jika bot sudah aktif lagi....`",
         )
         # Spin a new instance of bot
         args = [sys.executable, "./resources/startup/deploy.sh"]
