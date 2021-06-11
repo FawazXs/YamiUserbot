@@ -6,11 +6,11 @@ from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
 import time
 from datetime import datetime
-import _pyrogram.database.afkdb as _pyrogram
-from _pyrogram.helpers.pyrohelper import get_arg
-from _pyrogram.helpers.pyrohelper import user_afk
-from _pyrogram.modules.alive import get_readable_time
-from _pyrogram.helpers.utils import get_message_type, Types
+import pyrogram.database.afkdb as _pyrogram
+from pyrogram.helpers.pyrohelper import get_arg
+from pyrogram.helpers.pyrohelper import user_afk
+from pyrogram.modules.alive import get_readable_time
+from pyrogram.helpers.utils import get_message_type, Types
 
 AFK = False
 AFK_REASON = ""
@@ -40,14 +40,14 @@ async def afk(client, message):
         reason = None
     else:
         reason = arg
-    await _pyrogram.set_afk(True, afk_time, reason)
+    await pyrogram.set_afk(True, afk_time, reason)
     await message.edit("**I'm goin' AFK**")
 
 
 @app.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk), group=11)
 async def afk_mentioned(_, message):
     global MENTIONED
-    afk_time, reason = await _pyrogram.afk_stuff()
+    afk_time, reason = await pyrogram.afk_stuff()
     afk_since = get_readable_time(time.time() - afk_time)
     if "-" in str(message.chat.id):
         cid = str(message.chat.id)[4:]
@@ -84,7 +84,7 @@ async def afk_mentioned(_, message):
 
 @app.on_message(filters.create(user_afk) & filters.outgoing)
 async def auto_unafk(_, message):
-    await _pyrogram.set_unafk()
+    await pyrogram.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I'm no longer AFK**")
     global MENTIONED
     text = "**Total {} mentioned you**\n".format(len(MENTIONED))
