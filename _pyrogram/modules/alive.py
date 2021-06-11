@@ -9,13 +9,12 @@ from pyrogram import filters
 from _pyrogram import app, StartTime, CMD_HELP
 from sys import version_info
 
-from config import ALIVE_PIC, PM_IMG
 from pyrogram import __version__ as __pyro_version__
 from pyrogram.types import Message
 
 CMD_HELP.update(
     {
-        "Alive": """
+        "alive": """
 **📕 MODUL ALIVE:**
 `━━━━━━━━━━━━`
 `alive p` ⇛ Cek status alive pyrogram bot.
@@ -57,12 +56,6 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
-if ALIVE_PIC is None:
-    PM_iMG = "https://telegra.ph/file/f9f1d48988f2a98f2b510.jpg"
-else:
-    PM_iMG = ALIVE_PIC
-
 @app.on_message(filters.command("alive p", PREFIX) & filters.me)
 async def alive(_, m):
     start_time = time.time()
@@ -79,7 +72,7 @@ async def alive(_, m):
     reply_msg += f"**➠ owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`\n━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
     reply_msg += f"\n📶 bot uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)``**\n"
+    reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` | `[CHANNEL](https://t.me/levinachannel) `| `[OWNER](https://t.me/dlwrml)``**\n"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
