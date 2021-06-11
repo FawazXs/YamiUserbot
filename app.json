@@ -16,8 +16,8 @@
     "telethon"
   ],
   "repository": "https://github.com/levina-lab/vinauserbot",
-  "website": "jayantkageri.ml",
-  "success_url": "jayantkageri.ml",
+  "website": "https://t.me/levinachannel",
+  "success_url": "https://t.me/dlwrml",
   "stack": "heroku-20",
   "env": {
     "ENV": {
@@ -25,15 +25,15 @@
       "value": "ANYTHING"
     },
     "API_ID": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "Dapatkan dari my.telegram.org atau dari @koalasupportbot",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "Dapatkan dari my.telegram.org atau dari @koalasupportbot",
       "value": ""
     },
     "MONGO_URI": {
-      "description": "This is for the database account, you can obtain it from mongodb.com.",
+      "description": "Ini dibutuhkan untuk database akun, dapatkan dari mongodb.com.",
       "value" : "",
       "required": true
     }, 
@@ -52,11 +52,11 @@
       "value": ""
     },
     "HEROKU_APP_NAME": {
-      "description": "Heroku App Name that you putted on top",
+      "description": "Heroku App Name yang kamu isi paling awal di paling atas.",
       "value": ""
     },
     "HEROKU_API": {
-      "description": "Your Heroku API Key, Can be found in https://dashboard.heroku.com/account",
+      "description": "Heroku API Key milik mu, Temukan di https://dashboard.heroku.com/account",
       "value": ""
     }
   },
