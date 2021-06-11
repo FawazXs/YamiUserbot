@@ -72,7 +72,7 @@ async def alive(_, m):
     reply_msg += f"**🔖 Branch** : `master`\n"
     reply_msg += f"**🎖 License** : ""[GNU GPL V.3.0](https://github.com/levina-lab/vinauserbot/blob/master/LICENSE)""\n━━━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
-    reply_msg += f"\n📶 Uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg += f"\n📶 Uptime: `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)` `\n"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
