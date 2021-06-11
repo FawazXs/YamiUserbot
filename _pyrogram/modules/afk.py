@@ -26,10 +26,10 @@ CMD_HELP.update(
 async def collect_afk_messages(_, message: Message):
     if AFK:
         text = (
-            f"`haii, ini adalah pesan otomatis.\n"
-            f"saat ini saya sedang offline, hubungi lagi nanti.\n"
+            f"`saya sedang afk.\n"
+            f"\nsaat ini saya sedang offline, hubungi lagi nanti.\n"
             f"alasan: ```{AFK_REASON.upper()}```\n"
-            f"saya akan kembali online setelah selesai menyelesaikan urusan ku ☺.`"
+            f"\nsaya akan kembali online..`"
         )
         await message._client.send_message(
             chat_id=message.chat.id,
