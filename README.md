@@ -1,4 +1,4 @@
-<h1 align="center"><b>vina userbot</b></h1>
+<h1 align="center"><b>veez userbot</b></h1>
 <p align="center">
 <img src="https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg" width="256" height="256"/>
 </p>
@@ -43,6 +43,8 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku.
 
 # LEGAL
 ## Credits
+
+- Thanks to [Levina](https://github.com/levina-lab) for creating this repository
 - Thanks to [Satwik](https://github.com/okay-retard) for his [Zect Userbot](https://github.com/okay-retard/ZectUserbot)
 - Thanks to [Dan Tès](https://github.com/delivrance) for his [Pyrogram](https://docs.pyrogram.org)
 - Thanks to [Lonami](https://github.com/lonami/) for his [Telethon](https://docs.telethon.dev)
@@ -54,7 +56,7 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku.
 
 ## License
 ```
-    Vina Userbot, A Telegram Lightweight Userbot for Developers
+    Veez Userbot, A Telegram Lightweight Userbot for Developers
     Copyright (C) 2021 Levina Shavila
 
     This program is free software: you can redistribute it and/or modify
