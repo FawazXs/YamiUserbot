@@ -74,8 +74,17 @@ async def alive(_, m):
     end_time = time.time()
     reply_msg += f"\n📶 **Uptime** : `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)` `\n"
+    photo = "https://telegra.ph/file/f9f1d48988f2a98f2b510.jpg"
     await m.delete()
-    await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
+    if m.reply_to_message:
+        await app.send_photo(
+            m.chat.id,
+            photo,
+            caption=reply_msg,
+            reply_to_message_id=m.reply_to_message.message_id,
+        )
+        else:
+        await app.send_photo(m.chat.id, photo, caption=reply_msg, disable_web_page_preview=True)
 
 
 @app.on_message(filters.command("ping p", PREFIX) & filters.me)
