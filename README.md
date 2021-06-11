@@ -33,7 +33,7 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku.
 
 ## Configuration
 - `API_ID` and `API_HASH` - Dapatkan API_ID and API_HASH dari https://my.telegram.org
-- `TELETHON_SESSION` dan `PYROGRAM_SESSION` - Dapatkan melalui [Repl.it](https://repl.it/@jayantkageri/StringSession#main.py)
+- `TELETHON_SESSION` dan `PYROGRAM_SESSION` - Dapatkan melalui [Repl.it](https://replit.com/@levinalab/StringSession#main.py)
 - `HEROKU_APP_NAME` [Hanya Untuk Heroku] - Isi dengan app name yang kamu isi di kolom pertama.
 - `HEROKU_API` [Hanya Untuk Heroku] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
 - `LOG_CHAT` - Buat grup, lalu masukin [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
