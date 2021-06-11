@@ -5,5 +5,5 @@ from _pyrogram import app, LOGGER
 from _pyrogram.modules import *
 import os
 
-print("🌸 Veez Userbot Sudah Aktif 🌸\n⚙ Tipe bot: Pyrogram\nJoin @levinachannel for updates")
+print("🌸 Veez Userbot Sudah Aktif 🌸 \n⚙ Tipe bot: Pyrogram\nJoin @levinachannel for updates")
 app.run()
