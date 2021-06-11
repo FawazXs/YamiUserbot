@@ -25,9 +25,6 @@ CMD_HELP.update(
 )
 async def collect_afk_messages(_, message: Message):
     if AFK:
-        last_seen = subtract_time(datetime.now(), AFK_TIME)
-        is_group = True if message.chat.type in ["supergroup", "group"] else False
-        CHAT_TYPE = GROUPS if is_group else USERUSER
         text = (
             f"`haii, ini adalah pesan otomatis.\n"
             f"saat ini saya sedang offline, hubungi lagi nanti.\n"
@@ -36,7 +33,7 @@ async def collect_afk_messages(_, message: Message):
             f"saya akan kembali online setelah selesai menyelesaikan urusan ku ☺.`"
         )
         await message._client.send_message(
-            chat_id=GetChatID(message),
+            chat_id=message.chat.id,
             text=text,
             reply_to_message_id=message.message_id,
         )
@@ -56,6 +53,5 @@ async def afk_set(_, message: Message):
         AFK_REASON = afk_text
 
     AFK = True
-    AFK_TIME = datetime.now()
 
     await message.delete()
