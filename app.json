@@ -1,6 +1,7 @@
 {
   "name": "vina userbot",
   "description": "userbot untuk bersenang senang",
+  "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
     "developer",
@@ -17,7 +18,6 @@
   "repository": "https://github.com/levina-lab/vinauserbot",
   "website": "jayantkageri.ml",
   "success_url": "jayantkageri.ml",
-  "logo": "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "stack": "heroku-20",
   "env": {
     "ENV": {
@@ -32,6 +32,11 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+    "MONGO_URI": {
+      "description": "This is for the database account, you can obtain it from mongodb.com.",
+      "value" : "",
+      "required": true
+    }, 
     "PYROGRAM_SESSION": {
       "description": "Pyrogram String Session, Get it by Running python3 -m session",
       "value": "",
