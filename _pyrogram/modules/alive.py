@@ -60,19 +60,20 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[۩▬▬ 𝐕𝐈𝐍𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"**➠ versi python:** `{__python_version__}`\n"
-    reply_msg += f"**➠ versi pyrogram:** `{__pyro_version__}`\n"
-    reply_msg += f"**➠ versi userbot:** `0.1`\n"
-    reply_msg += f"**➠ project name:** `veez project`\n"
-    reply_msg += f"**➠ database:** `functioning`\n"
-    reply_msg += f"**➠ commands:** `25 commands`\n"
-    reply_msg += f"**➠ module:** `6 module`\n"
-    reply_msg += f"**➠ branch:** `master`\n"
-    reply_msg += f"**➠ owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`\n━━━━━━━━━━━━━━━━━━━━"
+    reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg += f"**🐍 Python:**ver. `{__python_version__}`\n"
+    reply_msg += f"**🖥 Pyrogram:**ver. `{__pyro_version__}`\n"
+    reply_msg += f"**🤖 Userbot:**ver `0.1`\n"
+    reply_msg += f"**🧪 Project:** `veez project`\n"
+    reply_msg += f"**🗃 Database:** `functioning`\n"
+    reply_msg += f"**🧩 Commands:** `25 commands`\n"
+    reply_msg += f"**📚 Module:** `6 module`\n"
+    reply_msg += f"**🔖 Branch:** `master`\n"
+    reply_msg += f"**👩🏼‍💻 Owner:** `𝕃𝔼𝕍𝕀ℕ𝔸`\n"
+    reply_msg += f"**🎖 License:** `[GNU GPL V.3.0](https://github.com/levina-lab/vinauserbot/blob/master/LICENSE)`\n━━━━━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
-    reply_msg += f"\n📶 bot uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` |` `[CHANNEL](https://t.me/levinachannel)` `| `[OWNER](https://t.me/dlwrml)``**\n"
+    reply_msg += f"\n📶 Uptime: {uptime}\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg += f"**``[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)``**\n"
     await m.delete()
     await app.send_message(m.chat.id, reply_msg, disable_web_page_preview=True)
 
