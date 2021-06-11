@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
 import time
 from datetime import datetime
-import pyrogram.database.afkdb as _pyrogram
+import pyrogram.database.afkdb as pyrogram
 from pyrogram.helpers.pyrohelper import get_arg
 from pyrogram.helpers.pyrohelper import user_afk
 from pyrogram.modules.alive import get_readable_time
