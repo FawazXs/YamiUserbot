@@ -1,10 +1,11 @@
+import time
 import humanize
 import asyncio
+
 from _pyrogram import app, CMD_HELP
 from pyrogram import filters
 from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
-import time
 from datetime import datetime
 import pyrogram.database.afkdb as pyrogram
 from pyrogram.helpers.pyrohelper import get_arg
