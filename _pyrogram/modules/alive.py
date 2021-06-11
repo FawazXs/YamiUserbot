@@ -84,7 +84,7 @@ async def alive(_, m):
             reply_to_message_id=m.reply_to_message.message_id,
         )
     else:
-        await app.send_photo(m.chat.id, photo, caption=reply_msg, disable_web_page_preview=True)
+        await app.send_photo(m.chat.id, photo, caption=reply_msg)
 
 
 @app.on_message(filters.command("ping p", PREFIX) & filters.me)
