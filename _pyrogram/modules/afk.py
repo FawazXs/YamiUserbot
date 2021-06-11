@@ -28,7 +28,6 @@ async def collect_afk_messages(_, message: Message):
         text = (
             f"`haii, ini adalah pesan otomatis.\n"
             f"saat ini saya sedang offline, hubungi lagi nanti.\n"
-            f"last seen: {last_seen}\n"
             f"alasan: ```{AFK_REASON.upper()}```\n"
             f"saya akan kembali online setelah selesai menyelesaikan urusan ku ☺.`"
         )
