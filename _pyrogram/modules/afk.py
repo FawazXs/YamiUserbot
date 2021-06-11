@@ -1,10 +1,16 @@
 import humanize
+import asyncio
 from _pyrogram import app, CMD_HELP
 from pyrogram import filters
 from pyrogram.types import Message
-from config import PREFIX
+from config import PREFIX, LOG_CHAT
 import time
 from datetime import datetime
+import _pyrogram.database.afkdb as _pyrogram
+from _pyrogram.helpers.pyrohelper import get_arg
+from _pyrogram.helpers.pyrohelper import user_afk
+from _pyrogram.modules.alive import get_readable_time
+from _pyrogram.helpers.utils import get_message_type, Types
 
 AFK = False
 AFK_REASON = ""
@@ -19,6 +25,24 @@ CMD_HELP.update(
     }
 )
 
+LOG_CHAT = LOG_CHAT
+
+MENTIONED = []
+AFK_RESTIRECT = {}
+DELAY_TIME = 60
+
+
+@app.on_message(filters.command("afk", PREFIX) & filters.me)
+async def afk(client, message):
+    afk_time = int(time.time())
+    arg = get_arg(message)
+    if not arg:
+        reason = None
+    else:
+        reason = arg
+    await _pyrogram.set_afk(True, afk_time, reason)
+    await message.edit("**I'm goin' AFK**")
+
 
 @app.on_message(
     ((filters.group & filters.mentioned) | filters.private) & ~filters.me & ~filters.service, group=3
@@ -27,7 +51,7 @@ async def collect_afk_messages(_, message: Message):
     if AFK:
         text = (
             f"`saya sedang afk.\n"
-            f"\nsaat ini saya sedang offline, hubungi lagi nanti.\n"
+            f"\nsedang offline dan sibuk.\n"
             f"alasan: ```{AFK_REASON.upper()}```\n"
             f"\nsaya akan kembali online..`"
         )
