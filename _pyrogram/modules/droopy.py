@@ -3,7 +3,7 @@ from pyrogram import filters
 from telethon import events
 from pyrogram.types import Message
 
-from _telethon.events import register
+from telethon.events import register
 from _pyrogram import app, CMD_HELP
 from _pyrogram.helpers.utils import get_message_type, Types
 
