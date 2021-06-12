@@ -6,6 +6,7 @@ from pyrogram.types import Message
 from telethon.events import register
 from _pyrogram import app, CMD_HELP
 from _pyrogram.helpers.utils import get_message_type, Types
+import asyncio
 
 
 CMD_HELP.update(
