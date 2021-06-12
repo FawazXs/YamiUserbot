@@ -1,4 +1,4 @@
-import time
+from time import sleep
 from pyrogram import filters
 from telethon import events
 from pyrogram.types import Message
