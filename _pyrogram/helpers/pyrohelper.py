@@ -1,6 +1,4 @@
-# This file is Originally Written By @okay-retard on GitHub
-# The Author (Jayant Kageri) just Ported this for Devloper Userbot
-# (C) 2021 Jayant Kageri
+# copyright 2021 (c) Levina Shavila
 
 from pyrogram.types import Message, User
 from afkdb import get_afk_status
