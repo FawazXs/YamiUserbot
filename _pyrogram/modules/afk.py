@@ -8,10 +8,10 @@ from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
 from datetime import datetime
 from database import afkdb
-from pyrogram.helpers.pyrohelper import get_arg
-from pyrogram.helpers.pyrohelper import user_afk
-from pyrogram.modules.alive import get_readable_time
-from pyrogram.helpers.utils import get_message_type, Types
+from _pyrogram.helpers.pyrohelper import get_arg
+from _pyrogram.helpers.pyrohelper import user_afk
+from _pyrogram.modules.alive import get_readable_time
+from _pyrogram.helpers.utils import get_message_type, Types
 
 AFK = False
 AFK_REASON = ""
