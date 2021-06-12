@@ -1,7 +1,7 @@
 # copyright 2021 (c) Levina Shavila
 
 from pyrogram.types import Message, User
-from pyrogram import get_afk_status
+from database import get_afk_status
 from pyrogram import Client
 import shlex
 
