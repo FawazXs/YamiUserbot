@@ -3,7 +3,7 @@
 # (C) 2021 Jayant Kageri
 
 from pyrogram.types import Message, User
-from database.afkdb import get_afk_status
+from afkdb import get_afk_status
 from pyrogram import Client
 import shlex
 
