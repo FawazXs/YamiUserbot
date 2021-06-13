@@ -19,12 +19,12 @@ CMD_HELP.update(
 )
 
 
-@register(outgoing=True, pattern='^.droopy(?: |$)(.*)')
+@register"(outgoing=True, pattern='^.droopy(?: |$)(.*)')"
 async def typewritter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Hallo.")
     sleep(1)
-    await typew.edit("Hallo..")
+    await typew.edit(" Hallo..")
     sleep(1)
     await typew.edit("Hallo...")
     sleep(1)
