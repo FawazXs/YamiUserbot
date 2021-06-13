@@ -20,23 +20,23 @@ dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun seca
 ## Deploy & String Session
 
 ### Deploy to Heroku [Direkomendasikan]
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot)[![Run on Repl.it](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) 🛠 [![Run on Repl.it](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
 
-Tekan tombol warna ungu diatas untuk deploy userbot di heroku.
+Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna abu abu untuk ambil string session.
 
 ### Local Deploy
 - isi di file config.py dengan value milik mu.
-- Install Requirements by `pip3 install -r requirements.txt`
-- Buka Terminal
-- Di Terminal Lakukan `python3 main.py`
+- Buka terminal
+- Install Requirements `pip3 install -r requirements.txt`
+- Jalankan bot `python3 main.py`
 - Selesai :)
 
 ## Configuration
-- `API_ID` and `API_HASH` - Dapatkan API_ID and API_HASH dari https://my.telegram.org
+- `API_ID` and `API_HASH` - Dapatkan dari https://my.telegram.org
 - `TELETHON_SESSION` dan `PYROGRAM_SESSION`
 - `HEROKU_APP_NAME` [Hanya Untuk Heroku] - Isi dengan app name yang kamu isi di kolom pertama.
 - `HEROKU_API` [Hanya Untuk Heroku] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
-- `LOG_CHAT` - Buat grup, lalu masukin [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
+- `LOG_CHAT` - Buat grup, lalu masukkan [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
 
 ## Support Group
 - Kalo ada masalah, Tanyakan di sini yah 👉 [@gcsupportbots](https://telegram.me/gcsupportbots)
