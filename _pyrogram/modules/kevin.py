@@ -4,22 +4,13 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from telethon.events import register
-from _pyrogram import app, CMD_HELP
+from _pyrogram import app
 from config import PREFIX
 from _pyrogram.helpers.utils import get_message_type, Types
 import asyncio
 
 
-CMD_HELP.update(
-    {
-        "animation": """
-**📕 MODULE ANIMATION:**
-`━━━━━━━━━━━━━━━━━`
-`animation` ⇛ ketik .droopy untuk melihat keajaiban.
-`animation` ⇛ ketik .kevincan untuk melihat keajaiban.
-"""
-    }
-)
+# created by levina (c) 2021 by veez project
 
 
 @app.on_message(filters.command("kevincan", PREFIX) & filters.me)
