@@ -22,7 +22,7 @@ CMD_HELP.update(
 
 
 @app.on_message(filters.command("droopy", PREFIX) & filters.me)
-async def koc(e):
+async def koc(_, e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("Hallo.")
         sleep(1)
