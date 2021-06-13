@@ -1,5 +1,6 @@
 from time import sleep
 from telethon import events
+from pyrogram import filters
 from pyrogram.types import Message
 
 from telethon.events import register
