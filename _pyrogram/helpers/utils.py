@@ -88,7 +88,7 @@ def get_note_type(msg):
     reply = msg.reply_to_message
     # determine what the contents of the filter are - text, image, sticker, etc
     if len(args) >= 3:
-        text = args[2]
+        text = args[1]
         data_type = Types.TEXT
 
     elif reply:
@@ -98,7 +98,7 @@ def get_note_type(msg):
             text = reply.caption.markdown
         else:
             text = ""
-        if len(args) >= 2 and reply.text:  # not caption, text
+        if len(args) >= 1 and reply.text:  # not caption, text
             data_type = Types.TEXT
 
         elif reply.sticker:
@@ -229,11 +229,11 @@ def get_welcome_type(msg):
     else:
         if msg.caption:
             text = msg.caption.split(None, 1)
-            if len(text) >= 2:
+            if len(text) >= 1:
                 text = msg.caption.markdown.split(None, 1)[1]
         elif msg.text:
             text = msg.text.split(None, 1)
-            if len(text) >= 2:
+            if len(text) >= 1:
                 text = msg.text.markdown.split(None, 1)[1]
         data_type = Types.TEXT
 
