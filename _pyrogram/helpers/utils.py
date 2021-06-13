@@ -84,11 +84,11 @@ def get_note_type(msg):
     raw_text = msg.text.markdown if msg.text else msg.caption.markdown
     args = raw_text.split(None, 2)
     # use python's maxsplit to separate cmd and args
-    note_name = args[1]
+    note_name = args[2]
     reply = msg.reply_to_message
     # determine what the contents of the filter are - text, image, sticker, etc
     if len(args) >= 3:
-        text = args[1]
+        text = args[2]
         data_type = Types.TEXT
 
     elif reply:
@@ -229,11 +229,11 @@ def get_welcome_type(msg):
     else:
         if msg.caption:
             text = msg.caption.split(None, 1)
-            if len(text) >= 1:
+            if len(text) >= 2:
                 text = msg.caption.markdown.split(None, 1)[1]
         elif msg.text:
             text = msg.text.split(None, 1)
-            if len(text) >= 1:
+            if len(text) >= 2:
                 text = msg.text.markdown.split(None, 1)[1]
         data_type = Types.TEXT
 
