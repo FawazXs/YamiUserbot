@@ -1,7 +1,7 @@
 {
   "name": "vina userbot",
-  "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "description": "userbot untuk bersenang senang",
+  "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
     "developer",
@@ -33,9 +33,9 @@
       "value": ""
     },
     "MONGO_URI": {
-      "description": "Ini dibutuhkan untuk database akun, dapatkan dari mongodb.com.",
+      "description": "bagian ini skip saja, belum dibutuhkan.",
       "value" : "",
-      "required": true
+      "required": false
     }, 
     "PYROGRAM_SESSION": {
       "description": "Pyrogram String Session, Get it by Running python3 -m session",
