@@ -3,7 +3,7 @@ from telethon import events
 from pyrogram.types import Message
 
 from telethon.events import register
-from _pyrogram import app, CMD_HELP, bot
+from _pyrogram import app, CMD_HELP
 from _pyrogram.helpers.utils import get_message_type, Types
 import asyncio
 
@@ -19,25 +19,7 @@ CMD_HELP.update(
 )
 
 
-@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 0.1
-
-    animation_ttl = range(117)
-
-    input_str = event.pattern_match.group(1)
-
-    if input_str == "bulan":
-
-        await event.edit(input_str)
-
-
-@register(outgoing=True, pattern='^.droopy(?: |$)(.*)')
+@app.on_message(filters.command, pattern='^.droopy(?: |$)(.*)')
 async def typewritter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Hallo.")
