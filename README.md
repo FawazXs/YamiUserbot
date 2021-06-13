@@ -15,12 +15,12 @@
 <h4 align="center">userbot yang dapat dijalankan di 2 base telethon dan pyrogram.</h4>
 
 # PENJELESAN
-dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun secara local, silahkan dipilih yang mana yang gampang. Repo ini juga masih rilis tahap awal, dan masih banyak yang harus di kembangkan, jika ingin berkontribusi di persilahkan.
+dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun secara local, silahkan dipilih yang mana yang gampang. Repo ini juga masih rilis tahap awal, dan masih banyak yang harus di kembangkan, jika ingin berkontribusi di persilahkan, dan repo userbot ini membutuhkan 2 jenis string session yakni pyrogram dan telethon.
 
 ## Deploy & String Session
 
 ### Deploy to Heroku [Direkomendasikan]
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) 🛠 [![Run on Repl.it](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) [![STRING SESSION](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
 
 Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna abu abu untuk ambil string session.
 
@@ -31,18 +31,18 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna 
 - Jalankan bot `python3 main.py`
 - Selesai :)
 
-## Configuration
+## 🛠 Configuration
 - `API_ID` and `API_HASH` - Dapatkan dari https://my.telegram.org
 - `TELETHON_SESSION` dan `PYROGRAM_SESSION`
 - `HEROKU_APP_NAME` [Hanya Untuk Heroku] - Isi dengan app name yang kamu isi di kolom pertama.
 - `HEROKU_API` [Hanya Untuk Heroku] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
 - `LOG_CHAT` - Buat grup, lalu masukkan [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
 
-## Support Group
+## 💬 Support Group
 - Kalo ada masalah, Tanyakan di sini yah 👉 [@gcsupportbots](https://telegram.me/gcsupportbots)
 
 # LEGAL
-## Credits
+## 💖 Credits
 
 - Thanks to [Levina](https://github.com/levina-lab) for creating this repository
 - Thanks to [Satwik](https://github.com/okay-retard) for his [Zect Userbot](https://github.com/okay-retard/ZectUserbot)
@@ -54,7 +54,7 @@ Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna 
 - Thanks to [Swanit](https://github.com/swatv3nub)
 - Thanks to [Sipak](https://github.com/ProgrammingError)
 
-## License
+## 🎖 License
 ```
     Veez Userbot, A Telegram Lightweight Userbot for Developers
     Copyright (C) 2021 Levina Shavila
