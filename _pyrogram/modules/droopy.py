@@ -21,7 +21,7 @@ CMD_HELP.update(
 
 
 @app.on_message(filters.command("^.droopy$")
-                async def typewritter(typew):
+async def typewritter(typew):
                 typew.pattern_match.group(1)
                 await typew.edit("Hallo.")
                 sleep(1)
