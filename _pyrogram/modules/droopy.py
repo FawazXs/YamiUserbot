@@ -14,7 +14,7 @@ CMD_HELP.update(
     {
         "animation": """
 **📕 MODULE ANIMATION:**
-`━━━━━━━━━━━━━━━━━━━`
+`━━━━━━━━━━━━━━━━━`
 `animation` ⇛ ketik .droopy untuk melihat animasi ketikan.
 """
     }
@@ -22,11 +22,11 @@ CMD_HELP.update(
 
 
 @app.on_message(filters.command("droopy", PREFIX) & filters.me)
-async def koc(e):
+async def koc=e:
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("Hallo.")
         sleep(1)
-        await e.edit(" Hallo..")
+        await e.edit("Hallo..")
         sleep(1)
         await e.edit("Hallo...")
         sleep(1)
