@@ -16,6 +16,7 @@ CMD_HELP.update(
 **📕 MODULE ANIMATION:**
 `━━━━━━━━━━━━━━━━━`
 `animation` ⇛ ketik .droopy untuk melihat animasi ketikan.
+`animation` ⇛ ketik .kevincan untuk melihat keajaiban.
 """
     }
 )
