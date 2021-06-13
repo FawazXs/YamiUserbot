@@ -1,5 +1,4 @@
 from time import sleep
-from pyrogram import filters
 from telethon import events
 from pyrogram.types import Message
 
@@ -21,7 +20,7 @@ CMD_HELP.update(
 
 
 @register(outgoing=True, pattern='^.droopy(?: |$)(.*)')
-async def typewritter(typew) :
+async def typewritter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Hallo.")
     sleep(1)
