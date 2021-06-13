@@ -19,9 +19,27 @@ CMD_HELP.update(
 `usage` ⇛ ketik .kevincan untuk melihat animasi ini.
 `usage` ⇛ ketik .pantau untuk melihat animasi ini.
 `usage` ⇛ ketik .mengsad untuk melihat animasi ini.
+`usage` ⇛ ketik .hati untuk melihat animasi ini.
 """
     }
 )
+
+
+@app.on_message(filters.command("hati", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("`\n(\\_/)`"
+                 "`\n(●_●)`"
+                 "`\n />❤️ *Ini Buat Kamu`")
+    sleep(3)
+    await e.edit("`\n(\\_/)`"
+                 "`\n(●_●)`"
+                 "`\n/>💔  *Aku Ambil Lagi`")
+    sleep(2)
+    await e.edit("`\n(\\_/)`"
+                 "`\n(●_●)`"
+                 "`\n💔<\\  *Terimakasih`")
+
 
 
 @app.on_message(filters.command("mengsad", PREFIX) & filters.me)
