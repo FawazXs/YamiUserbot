@@ -3,7 +3,8 @@ from telethon import events
 from pyrogram.types import Message
 
 from telethon.events import register
-from _pyrogram import app, CMD_HELP, bot
+from _pyrogram import app, CMD_HELP
+import bot
 from _pyrogram.helpers.utils import get_message_type, Types
 import asyncio
 
