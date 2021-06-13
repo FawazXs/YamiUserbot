@@ -19,7 +19,25 @@ CMD_HELP.update(
 )
 
 
-@register"(outgoing=True, pattern='^.droopy(?: |$)(.*)')"
+@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 0.1
+
+    animation_ttl = range(117)
+
+    input_str = event.pattern_match.group(1)
+
+    if input_str == "bulan":
+
+        await event.edit(input_str)
+
+
+@register(outgoing=True, pattern='^.droopy(?: |$)(.*)')
 async def typewritter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Hallo.")
