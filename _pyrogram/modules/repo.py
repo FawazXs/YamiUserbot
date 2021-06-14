@@ -1,3 +1,4 @@
+import os
 from time import sleep
 from telethon import events
 from pyrogram import filters
@@ -10,9 +11,9 @@ import asyncio
 
 
 @app.on_message(filters.command("repo", PREFIX) & filters.me)
-async def koc(_, e, m):
-  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-    await e.edit("╭✠╼━━━━━━❖━━━━━━━✠╮"
+async def koc(_, m):
+  if not m.text[0].isalpha() and m.text[0] not in ("/", "#", "@", "!"):
+    await m.edit("╭✠╼━━━━━━❖━━━━━━━✠╮"
                  "\n` `[🌸 𝐑𝐄𝐏𝐎 𝐕𝐄𝐄𝐙 𝐔𝐒𝐄𝐑𝐁𝐎𝐓](https://github.com/levina-lab/vinauserbot)` `"
                  "\n╰✠╼━━━━━━❖━━━━━━━✠╯"
                  "\n🎖` `[GNU GPL V.3.0](https://github.com/levina-lab/vinauserbot/blob/master/LICENSE)` `")
