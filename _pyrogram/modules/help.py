@@ -25,7 +25,7 @@ HELP.update(
 async def help(client, message):
     args = get_arg(message)
     if not args:
-        text = "**━━━━━━ MODULE LIST ━━━━━━━━**\n\n"
+        text = "**━━━━━━ 𝗠𝗢𝗗𝗨𝗟𝗘 𝗟𝗜𝗦𝗧 ━━━━━━━━**\n\n"
         for key, value in HELP.items():
             text += f"{key}: {value}\n\n"
         await message.edit(text)
