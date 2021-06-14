@@ -14,5 +14,6 @@ async def koc(_, e):
   if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
     await e.edit("╭✠╼━━━━━━❖━━━━━━━✠╮"
                  "\n` `[🌸 𝐑𝐄𝐏𝐎 𝐕𝐄𝐄𝐙 𝐔𝐒𝐄𝐑𝐁𝐎𝐓](https://github.com/levina-lab/vinauserbot)` `"
-                 "\n╰✠╼━━━━━━❖━━━━━━━✠╯")
-    await app.send_message(m.chat.id, disable_web_page_preview=True)
+                 "\n╰✠╼━━━━━━❖━━━━━━━✠╯"
+                 "\n🎖 this repository is managed by veez project, copyrights and licenses have been applied to this repository.")
+    await app.send_message(disable_web_page_preview=True)
