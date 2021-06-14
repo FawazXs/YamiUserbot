@@ -12,3 +12,5 @@ dnspython
 requests
 pillow
 humanize
+motor
+pymongo
