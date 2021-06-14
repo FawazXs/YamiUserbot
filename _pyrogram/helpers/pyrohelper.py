@@ -1,6 +1,6 @@
 # copyright 2021 (c) Levina Shavila
 
-from pyrogram.database.afkdb import get_afk_status
+from database.afkdb import get_afk_status
 from pyrogram.types import Message, User
 from pyrogram import Client
 import shlex
