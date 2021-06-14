@@ -12,14 +12,14 @@ import asyncio
 
 CMD_HELP.update(
     {
-        "animation": """
-**📕 MODULE ANIMATION:**
-`━━━━━━━━━━━━━━━━━`
-`usage` ⇛ ketik .droopy untuk melihat animasi ini.
-`usage` ⇛ ketik .kevincan untuk melihat animasi ini.
-`usage` ⇛ ketik .pantau untuk melihat animasi ini.
-`usage` ⇛ ketik .mengsad untuk melihat animasi ini.
-`usage` ⇛ ketik .hati untuk melihat animasi ini.
+        "animation1": """
+**📕 MODULE ANIMATION 1:**
+`━━━━━━━━━━━━━━━━━━`
+`usage` ⇛ ketik .droopy
+`usage` ⇛ ketik .kevincan
+`usage` ⇛ ketik .pantau
+`usage` ⇛ ketik .mengsad
+`usage` ⇛ ketik .hati
 """
     }
 )
