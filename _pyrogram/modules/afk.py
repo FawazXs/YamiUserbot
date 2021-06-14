@@ -8,7 +8,7 @@ from _pyrogram import app, CMD_HELP
 from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
 from pyrogram.helpers.pyrohelper import get_arg
-import pyrogram.database.afkdb as pyrogram
+import database.afkdb as pyrogram
 from pyrogram.helpers.pyrohelper import user_afk
 from pyrogram.modules.alive import get_readable_time
 from _pyrogram.helpers.utils import get_message_type, Types
