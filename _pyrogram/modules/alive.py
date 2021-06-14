@@ -14,8 +14,8 @@ from pyrogram.types import Message
 
 CMD_HELP.update(
     {
-        "alive": """
-**📕 MODUL ALIVE:**
+        "mybot": """
+**📕 MODUL MYBOT:**
 `━━━━━━━━━━━━`
 `alive p` ⇛ Cek status alive pyrogram bot.
 `alive t` ⇛ Cek status alive telethon bot.
