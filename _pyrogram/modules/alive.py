@@ -21,6 +21,7 @@ CMD_HELP.update(
 `alive t` ⇛ Cek status alive telethon bot.
 `ping p` ⇛ Cek ping pyrogram bot.
 `ping t` ⇛ Cek ping telethon bot.
+`repo` ⇛ give your repo information.
 """
     }
 )
