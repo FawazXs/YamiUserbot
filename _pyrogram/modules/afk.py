@@ -6,7 +6,9 @@ from datetime import datetime
 
 from _pyrogram import app, CMD_HELP
 from pyrogram.types import Message
-from config import PREFIX
+from config import PREFIX, LOG_CHAT
+import pyrogram.database.afkdb as pyrogram
+from pyrogram.modules.alive import get_readable_time
 from _pyrogram.helpers.utils import get_message_type, Types
 
 AFK = False
@@ -18,9 +20,16 @@ CMD_HELP.update(
 **📕 MODULE AFK:**
 `━━━━━━━━━━━━━`
 `afk (alasan)` ⇛ Tandai dirimu sedang afk atau offline.
+`unafk` ⇛ Menghapus status afk dan tandai dirimu sudah online.
 """
     }
 )
+
+LOG_CHAT = LOG_CHAT
+
+MENTIONED = []
+AFK_RESTIRECT = {}
+DELAY_TIME = 60
 
 
 @app.on_message(
