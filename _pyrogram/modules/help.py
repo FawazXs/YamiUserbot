@@ -10,7 +10,7 @@ from _pyrogram.helpers.pyrohelper import get_arg
 HELP.update(
     {
         "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟭**": "𝙖𝙙𝙢𝙞𝙣: ban, unban, promote, demote, kick, mute, unmute, pin, purge, del, invite",
-        "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟮**": "𝙢𝙮𝙗𝙤𝙩: alive, ping",
+        "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟮**": "𝙢𝙮𝙗𝙤𝙩: alive, ping, repo",
         "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟯**": "𝙙𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧: peval, teval, sh",
         "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟰**": "𝙢𝙞𝙨𝙘: paste, tr, info, id",
         "**📚 𝗠𝗢𝗗𝗨𝗟𝗘 𝟱**": "𝙝𝙚𝙧𝙤𝙠𝙪: update, restart, logs",
