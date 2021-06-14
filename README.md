@@ -14,12 +14,18 @@
 </p>
 <h4 align="center">userbot yang dapat dijalankan di 2 base telethon dan pyrogram.</h4>
 
+> Telegram userbot based on [Pyrogram](https://github.com/pyrogram/pyrogram) and [Telethon](https://github.com/telethon/telethon)
+
+Repositori ini berisi kode sumber Telegram Userbot dan instruksi untuk menjalankan dan menyalin repo ini. Selain tujuan utamanya, bot ini juga menampilkan [**Pyrogram Asyncio**](https:////github.com/pyrogram/pyrogram/issues/181) dan [**Smart Plugins**](https://docs.pyrogram.org/topics/smart-plugins); jangan ragu untuk menjelajahi kode sumber untuk pelajari lebih lanjut tentang topik ini.
+
+Saya berasumsi anda akan membaca seluruh isi file README.md ini sebelum melanjutkan.
+
+> Pengembangan Dan Pengoptimalisasian Repo Sedang Berlangsung.
+
 # PENJELESAN
 dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun secara local, silahkan dipilih yang mana yang gampang. Repo ini juga masih rilis tahap awal, dan masih banyak yang harus di kembangkan, jika ingin berkontribusi di persilahkan, dan repo userbot ini membutuhkan 2 jenis string session yakni pyrogram dan telethon.
 
-## Deploy & String Session
-
-### Deploy to Heroku [Direkomendasikan]
+### Deploy Userbot & String Session
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) [![STRING SESSION](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
 
 Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna abu abu untuk ambil string session.
