@@ -55,7 +55,7 @@ async def koc(_, e):
     
 @app.on_message(filters.command("zombi", PREFIX) & filters.me)
 async def koc(_, e):
-  if not e.text[0].isalpha() and e.text[0] not in ("/". "#", "@", "!"):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
     await e.edit("`ZO.. ZOMBIEEE...`")
     sleep(1)
     await e.edit("`LARII ADA ZOMBIEEE...`")
