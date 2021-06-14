@@ -14,9 +14,9 @@
 </p>
 <h4 align="center">userbot yang dapat dijalankan di 2 base telethon dan pyrogram.</h4>
 
-> Telegram userbot based on [Pyrogram](https://github.com/pyrogram/pyrogram) and [Telethon](https://github.com/telethon/telethon)
+> Telegram userbot based on [Pyrogram](https://github.com/pyrogram/pyrogram) and [Telethon](https://github.com/LonamiWebs/Telethon)
 
-Repositori ini berisi kode sumber Telegram Userbot dan instruksi untuk menjalankan dan menyalin repo ini. Selain tujuan utamanya, bot ini juga menampilkan [**Pyrogram Asyncio**](https:////github.com/pyrogram/pyrogram/issues/181) dan [**Smart Plugins**](https://docs.pyrogram.org/topics/smart-plugins); jangan ragu untuk menjelajahi kode sumber untuk pelajari lebih lanjut tentang topik ini.
+Repositori ini berisi kode sumber Telegram Userbot dan instruksi untuk menjalankan dan menyalin repo ini. Selain tujuan utamanya, bot ini juga menampilkan [**Pyrogram Asyncio**](https:////github.com/pyrogram/pyrogram/issues/181) dan [**Smart Plugins**](https://docs.pyrogram.org/topics/smart-plugins) jangan ragu untuk menjelajahi kode sumber untuk pelajari lebih lanjut tentang topik ini.
 
 Saya berasumsi anda akan membaca seluruh isi file README.md ini sebelum melanjutkan.
 
