@@ -20,13 +20,13 @@ CMD_HELP.update(
         "Heroku": """
 **📕 MODULE HEROKU:**
 `━━━━━━━━━━━━━━━━━━━`
- `update` -> Memeriksa pembaruan & memperbarui userbot anda.
- `restart` -> Mulai ulang userbot anda.
- `logs` -> Mendapatkan log heroku"""
+`update` -> Memeriksa pembaruan & memperbarui userbot anda.
+`restart` -> Mulai ulang userbot anda.
+`logs` -> Menampilkan log heroku"""
     }
 )
 
-UPSTREAM_REPO_URL = "https://github.com/levina-lab/vinauserbot"
+UPSTREAM_REPO_URL = "https://github.com/levina-lab/veezuserbot"
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
 )
