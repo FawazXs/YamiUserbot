@@ -7,7 +7,6 @@ from datetime import datetime
 from _pyrogram import app, CMD_HELP
 from pyrogram.types import Message
 from config import PREFIX, LOG_CHAT
-from pyrogram.modules.alive import get_readable_time
 from _pyrogram.helpers.utils import get_message_type, Types
 
 
