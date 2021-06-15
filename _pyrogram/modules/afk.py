@@ -51,7 +51,7 @@ async def afk_mentioned(client, message):
     )
 
 
-@app.on_message(filters.outgoing & filters.me & filters.create(user_afk))
+@app.on_message(filters.outgoing & filters.me & ~filters.create(user_afk))
 async def auto_unafk(client, message):
     await afkme.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")

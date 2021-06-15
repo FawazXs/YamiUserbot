@@ -36,7 +36,11 @@ async def set_unafk():
 
 async def get_afk_status():
     g_afk = await col1.find_one({"afk_id": 1})
-    return True if g_afk else False
+    f = g_afk["afk_status"]
+    if f == True:
+        return True
+    else:
+        return False
 
 
 async def get_afk_time():
