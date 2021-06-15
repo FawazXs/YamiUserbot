@@ -22,7 +22,7 @@ LOG_CHAT = LOG_CHAT
 
 @app.on_message(filters.command("afk", PREFIX) & filters.me)
 async def afk(Client, message):
-    afk_time = int(time.time())
+    afk_time = time.time()
     arg = get_arg(message)
     if not arg:
         await afkme.set_afk(True, afk_time)
@@ -53,7 +53,7 @@ async def afk_mentioned(client, message):
 
 @app.on_message(filters.outgoing & filters.me & filters.create(user_afk))
 async def auto_unafk(client, message):
-    await afkme.set_unafk()
+
     unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")
     afk_since, reason = await afkme.get_afk_time()
     afk_e = get_readable_time(time.time() - afk_since)
@@ -63,3 +63,4 @@ async def auto_unafk(client, message):
     )
     await asyncio.sleep(3)
     await unafk_message.delete()
+    await afkme.set_unafk()
