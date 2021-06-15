@@ -18,6 +18,8 @@ CMD_HELP.update(
 `usage` ⇛ ketik .darling
 `usage` ⇛ ketik .zombi
 `usage` ⇛ ketik .djokes
+`usage` ⇛ ketik .nih
+`usage` ⇛ ketik .hiks
 """
     }
 )
@@ -144,3 +146,76 @@ async def koc(_, e):
     await e.edit("`karena yang tangannya buntung tidak bisa tepuk pramuka..`")
     sleep(2)
     await e.edit("`sekian, terimakasih..`")
+    
+    
+@app.on_message(filters.command("nih", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("`\n(\\_/)`"
+                 "`\n(●_●)`"
+                 "`\n />💖 *Nih Buat Kamu`")
+    sleep(2)
+    await e.edit("`\n(\\_/)`"
+                 "`\n(●_●)`"
+                 "`\n💖<\\  *Tapi Bo'ong HiyaHiyaHiya`")
+    
+    
+@app.on_message(filters.command("hiks", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("أ‿أ")
+    await e.edit("╥﹏╥")
+    await e.edit("(;﹏;)")
+    await e.edit("(ToT)")
+    await e.edit("(┳Д┳)")
+    await e.edit("(ಥ﹏ಥ)")
+    await e.edit("（；へ：）")
+    await e.edit("(T＿T)")
+    await e.edit("（πーπ）")
+    await e.edit("(Ｔ▽Ｔ)")
+    await e.edit("(⋟﹏⋞)")
+    await e.edit("（ｉДｉ）")
+    await e.edit("(´Д⊂ヽ")
+    await e.edit("(;Д;)")
+    await e.edit("（>﹏<）")
+    await e.edit("(TдT)")
+    await e.edit("(つ﹏⊂)")
+    await e.edit("༼☯﹏☯༽")
+    await e.edit("(ノ﹏ヽ)")
+    await e.edit("(ノAヽ)")
+    await e.edit("(╥_╥)")
+    await e.edit("(T⌓T)")
+    await e.edit("(༎ຶ⌑༎ຶ)")
+    await e.edit("(☍﹏⁰)｡")
+    await e.edit("(ಥ_ʖಥ)")
+    await e.edit("(つд⊂)")
+    await e.edit("(≖͞_≖̥)")
+    await e.edit("(இ﹏இ`｡)")
+    await e.edit("༼ಢ_ಢ༽")
+    await e.edit("༼ ༎ຶ ෴ ༎ຶ༽")
+    
+    
+@app.on_message(filters.command("hujat", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("`Hai Beban Keluarga, Apa Kabar 😜`")
+    sleep(1)
+    await e.edit("`Jangan Bilang Lu Gak Dianggep Sama Ortu Lu 🤣`")
+    sleep(1)
+    await e.edit("`Mau Tau Karena Apa `")
+    sleep(1)
+    await e.edit("`APA PERLU GUA SANTUNIN ?? 🙈🙈 xixixi`")
+    sleep(1)
+    await e.edit("`OH IYAA LUPAAA, LU KAN BEBAN KELUARGA 🤣`")
+    sleep(1)
+    await e.edit("`MANA MUNGKIN ORTU LU PEDULII xixixi 🙈`")
+    sleep(1)
+    await e.edit("`KETAWA DULU BOLEH KALI YAA 😁`")
+    sleep(1)
+    await e.edit("`HAHAHAHAHAHAHA`")
+    sleep(1)
+    await e.edit("`KASIAN ORTUNYAA GAPEDULIII 🙈🤣`")
+    sleep(1)
+    await e.edit("`MAAF YA, CANDAA BEBANNNN xixixi 🙈`")
+    sleep(1)
+    await e.edit("`Tapi Bo'ong Hiyahiyahiya`")
