@@ -13,7 +13,6 @@
     "coding",
     "pyrogram",
     "telethon",
-    "media",
   ],
   "repository": "https://github.com/levina-lab/veezuserbot",
   "success_url": "https://t.me/dlwrml"
