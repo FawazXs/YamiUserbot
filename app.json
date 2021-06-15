@@ -15,7 +15,7 @@
     "telethon",
   ],
   "repository": "https://github.com/levina-lab/veezuserbot",
-  "success_url": "https://t.me/dlwrml"
+  "success_url": "https://t.me/dlwrml",
   "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "website": "https://t.me/levinachannel",
   "stack": "heroku-20",
