@@ -1,5 +1,5 @@
 from logging import disable
-import time
+import datetime
 from pyrogram import *
 
 from _pyrogram import app, CMD_HELP
@@ -22,24 +22,24 @@ LOG_CHAT = LOG_CHAT
 
 @app.on_message(filters.command("afk", PREFIX) & filters.me)
 async def afk(Client, message):
-    afk_time = int(time.time())
+    afk_time = datetime.now()
     arg = get_arg(message)
     if not arg:
         await afkme.set_afk(True, afk_time)
     else:
         await afkme.set_afk(True, afk_time, arg)
-    await message.edit("**I am going AFK**")
+    x = await message.edit("**I am going AFK**")
+    await asyncio.sleep(3)
+    x.delete()
 
 
-@app.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk))
+@app.on_message(
+    filters.mentioned & ~filters.bot & filters.create(user_afk) & ~filters.me
+)
 async def afk_mentioned(client, message):
-    global MENTIONED
     afk_since, reason = await afkme.get_afk_time()
-    total_afk = int(afk_since) - int(time.time())
-    if "-" in str(message.chat.id):
-        cid = str(message.chat.id)[4:]
-    else:
-        cid = str(message.chat.id)
+    total_afk = str(datetime.now() - afk_since)
+
     await message.reply(
         f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{total_afk}`"
     )
@@ -51,13 +51,15 @@ async def afk_mentioned(client, message):
     )
 
 
-@app.on_message(filters.outgoing & filters.me & ~filters.create(user_afk))
+@app.on_message(filters.outgoing & filters.me & filters.create(user_afk))
 async def auto_unafk(client, message):
     await afkme.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")
+    afk_since, reason = await afkme.get_afk_time()
+    total_afk = str(datetime.now() - afk_since)
     await app.send_message(
         LOG_CHAT,
-        "You are no longer AFK!!. You have received the above messages when you were offline",
+        f"__You are no longer AFK!!.__\n**You have received the above messages when you were offline**\n**Total Time AFK:** `{total_afk}`",
     )
-    await asyncio.sleep(2)
+    await asyncio.sleep(3)
     await unafk_message.delete()

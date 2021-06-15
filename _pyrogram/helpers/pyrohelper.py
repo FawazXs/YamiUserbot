@@ -35,7 +35,7 @@ def get_args(message):
 
 async def user_afk(filter, client: Client, message: Message):
     check = await get_afk_status()
-    if check:
+    if check == True:
         return True
     else:
         return False
