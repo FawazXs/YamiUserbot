@@ -1,5 +1,5 @@
 from logging import disable
-import datetime
+from datetime import datetime
 from pyrogram import *
 
 from _pyrogram import app, CMD_HELP
