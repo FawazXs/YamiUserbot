@@ -43,7 +43,7 @@
       "required": true
     },
     "TELETHON_SESSION": {
-      "description": "Pyrogram String Session, Get it by Running python3 -m session",
+      "description": "Telethon String Session, Get it by Running python3 -m session",
       "value": "",
       "required": true
     },
