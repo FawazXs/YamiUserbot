@@ -15,7 +15,7 @@ from pyrogram.types import Message
 CMD_HELP.update(
     {
         "mybot": """
-**📕 MODUL MYBOT:**
+**📕 MODULE MYBOT:**
 `━━━━━━━━━━━━`
 `alive p` ⇛ Cek status alive pyrogram bot.
 `alive t` ⇛ Cek status alive telethon bot.
@@ -57,6 +57,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+
 @app.on_message(filters.command("alive p", PREFIX) & filters.me)
 async def alive(_, m):
     start_time = time.time()
@@ -71,7 +72,11 @@ async def alive(_, m):
     reply_msg += f"**📚 Module** : `7 module`\n"
     reply_msg += f"**👩🏼‍💻 Owner** : `𝕃𝔼𝕍𝕀ℕ𝔸`\n"
     reply_msg += f"**🔖 Branch** : `master`\n"
-    reply_msg += f"**🎖 License** : ""[GNU GPL V.3.0](https://github.com/levina-lab/vinauserbot/blob/master/LICENSE)""\n━━━━━━━━━━━━━━━━━━━━━━"
+    reply_msg += (
+        f"**🎖 License** : "
+        "[GNU GPL V.3.0](https://github.com/levina-lab/vinauserbot/blob/master/LICENSE)"
+        "\n━━━━━━━━━━━━━━━━━━━━━━"
+    )
     end_time = time.time()
     reply_msg += f"\n📶 **Uptime** : `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)` `\n"
@@ -96,4 +101,7 @@ async def pingme(_, message: Message):
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`", disable_web_page_preview=True)
+    await message.edit(
+        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`",
+        disable_web_page_preview=True,
+    )

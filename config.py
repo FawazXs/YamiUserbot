@@ -9,4 +9,3 @@ PY_SESSION = os.getenv("PYROGRAM_SESSION")
 TE_SESSION = os.getenv("TELETHON_SESSION")
 PREFIX = os.environ.get("PREFIX", ".")
 LOG_CHAT = int(os.getenv("LOG_CHAT"))
-
