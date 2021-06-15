@@ -102,6 +102,6 @@ async def pingme(_, message: Message):
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
     await message.edit(
-        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`",
+        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `{(message.from_user.first_name).upper()}`",
         disable_web_page_preview=True,
     )
