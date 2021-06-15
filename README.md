@@ -12,7 +12,7 @@
 <img title="Forks" src="https://img.shields.io/github/forks/levina-lab/vinauserbot?label=Forks&color=brickred&style=flat-square">
 <img title="Watching" src="https://img.shields.io/github/watchers/levina-lab/vinauserbot?label=Watchers&color=red&style=flat-square">
 </p>
-<h4 align="center">userbot yang dapat dijalankan di 2 base telethon dan pyrogram.</h4>
+<h4 align="center">a telegram userbot based on pyrogram and telethon.</h4>
 
 > Telegram userbot based on [Pyrogram](https://github.com/pyrogram/pyrogram) and [Telethon](https://github.com/LonamiWebs/Telethon)
 
