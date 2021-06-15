@@ -34,7 +34,7 @@ async def afk(Client, message):
 @app.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk))
 async def afk_mentioned(client, message):
     global MENTIONED
-    afk_since, reason = afkme.get_afk_time()
+    afk_since, reason = await afkme.get_afk_time()
     total_afk = int(afk_since) - int(time.time())
     if "-" in str(message.chat.id):
         cid = str(message.chat.id)[4:]
