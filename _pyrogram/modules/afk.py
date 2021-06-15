@@ -23,11 +23,12 @@ LOG_CHAT = LOG_CHAT
 @app.on_message(filters.command("afk", PREFIX) & filters.me)
 async def afk(Client, message):
     afk_time = datetime.now()
+    afk_start = afk_time.replace(microsecond=0)
     arg = get_arg(message)
     if not arg:
-        await afkme.set_afk(True, afk_time)
+        await afkme.set_afk(True, afk_start)
     else:
-        await afkme.set_afk(True, afk_time, arg)
+        await afkme.set_afk(True, afk_start, arg)
     x = await message.edit("**I am going AFK**")
     await asyncio.sleep(3)
     await x.delete()
@@ -38,10 +39,12 @@ async def afk(Client, message):
 )
 async def afk_mentioned(client, message):
     afk_since, reason = await afkme.get_afk_time()
-    total_afk = str(datetime.now() - afk_since)
+    back_alive = datetime.now()
+    afk_e = back_alive.replace(microsecond=0)
+    total_afk_time = str((afk_e - afk_since))
 
     await message.reply(
-        f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{total_afk}`"
+        f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{total_afk_time}`"
     )
     await app.forward_message(
         chat_id=LOG_CHAT,
@@ -56,10 +59,12 @@ async def auto_unafk(client, message):
     await afkme.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")
     afk_since, reason = await afkme.get_afk_time()
-    total_afk = str(datetime.now() - afk_since)
+    back_alive = datetime.now()
+    afk_e = back_alive.replace(microsecond=0)
+    total_afk_time = str((afk_e - afk_since))
     await app.send_message(
         LOG_CHAT,
-        f"__You are no longer AFK!!.__\n**You have received the above messages when you were offline**\n**Total Time AFK:** `{total_afk}`",
+        f"__You are no longer AFK!!.__\n**You have received the above messages when you were offline**\n**Total Time AFK:** `{total_afk_time}`",
     )
     await asyncio.sleep(3)
     await unafk_message.delete()
