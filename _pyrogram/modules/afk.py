@@ -30,7 +30,7 @@ async def afk(Client, message):
         await afkme.set_afk(True, afk_time, arg)
     x = await message.edit("**I am going AFK**")
     await asyncio.sleep(3)
-    x.delete()
+    await x.delete()
 
 
 @app.on_message(
