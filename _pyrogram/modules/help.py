@@ -21,7 +21,7 @@ HELP.update(
 )
 
 
-@app.on_message(filters.command("helpme", PREFIX) & filters.me)
+@app.on_message(filters.command("help", PREFIX) & filters.me)
 async def help(client, message):
     args = get_arg(message)
     if not args:
