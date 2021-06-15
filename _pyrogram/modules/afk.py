@@ -2,8 +2,8 @@ from logging import disable
 import time
 from pyrogram import *
 
-from _pyrogram import app
-from config import PREFIX, CMD_HELP, LOG_CHAT
+from _pyrogram import app, CMD_HELP
+from config import PREFIX, LOG_CHAT
 import _pyrogram.database.afkdb as afkme
 from _pyrogram.helpers.pyrohelper import get_arg, user_afk
 

@@ -62,7 +62,7 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/vinauserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/veezuserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**🐍 Python** : `ver` `{__python_version__}`\n"
     reply_msg += f"**🖥 Pyrogram** : `ver` `{__pyro_version__}`\n"
     reply_msg += f"**🤖 Userbot** : `ver 0.1`\n"
@@ -102,6 +102,6 @@ async def pingme(_, message: Message):
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
     await message.edit(
-        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`",
+        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `ʟᴇᴠɪɴᴀ`",
         disable_web_page_preview=True,
     )
