@@ -40,7 +40,7 @@ async def afk(client, message):
     await message.edit("**I'm goin' AFK**")
 
 
-@app.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk), group=11)
+@app.on_message(filters.mentioned & ~filters.bot & filters.create, group=11)
 async def afk_mentioned(_, message):
     global MENTIONED
     afk_time, reason = await pyrogram.afk_stuff()
