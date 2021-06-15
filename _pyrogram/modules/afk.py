@@ -78,7 +78,7 @@ async def afk_mentioned(_, message):
         )
 
 
-@app.on_message(filters.create(user_afk) & filters.outgoing)
+@app.on_message(filters.create & filters.outgoing)
 async def auto_unafk(_, message):
     await pyrogram.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I'm no longer AFK**")
