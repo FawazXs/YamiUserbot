@@ -20,6 +20,7 @@ CMD_HELP.update(
 `usage` ⇛ ketik .djokes
 `usage` ⇛ ketik .nih
 `usage` ⇛ ketik .hiks
+`usage` ⇛ ketik .hujat
 """
     }
 )
@@ -202,11 +203,11 @@ async def koc(_, e):
     sleep(1)
     await e.edit("`Jangan Bilang Lu Gak Dianggep Sama Ortu Lu 🤣`")
     sleep(1)
-    await e.edit("`Mau Tau Karena Apa `")
+    await e.edit("`Mau Tau Karena Apa ?`")
     sleep(1)
-    await e.edit("`APA PERLU GUA SANTUNIN ?? 🙈🙈 xixixi`")
+    await e.edit("`Karena Lo Wibu, Sampah, Pemuja Plastik xixixi 🙊🙊`")
     sleep(1)
-    await e.edit("`OH IYAA LUPAAA, LU KAN BEBAN KELUARGA 🤣`")
+    await e.edit("`Dahlah Gak Usah Berharap Banyak, Elu Itu Udah Gak Berguna 😜`")
     sleep(1)
     await e.edit("`MANA MUNGKIN ORTU LU PEDULII xixixi 🙈`")
     sleep(1)
@@ -219,3 +220,7 @@ async def koc(_, e):
     await e.edit("`MAAF YA, CANDAA BEBANNNN xixixi 🙈`")
     sleep(1)
     await e.edit("`Tapi Bo'ong Hiyahiyahiya`")
+    sleep(1)
+    await e.edit("`Skip, Baperan...`")
+    sleep(1)
+    await e.edit("`BYE.`")
