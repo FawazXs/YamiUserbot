@@ -1,6 +1,8 @@
 # (C) 2021, Levina Shavila
 import os
 
+from pyrogram.types.messages_and_media import message
+
 from config import PREFIX
 import asyncio
 import time
@@ -59,7 +61,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 @app.on_message(filters.command("alive p", PREFIX) & filters.me)
-async def alive(_, m):
+async def alive(_, message: Message):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/veezuserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
@@ -70,7 +72,7 @@ async def alive(_, m):
     reply_msg += f"**🗃 Database** : `functioning`\n"
     reply_msg += f"**🧩 Commands** : `35 commands`\n"
     reply_msg += f"**📚 Module** : `7 module`\n"
-    reply_msg += f"**👩🏼‍💻 Owner** : `𝕃𝔼𝕍𝕀ℕ𝔸`\n"
+    reply_msg += f"**👩🏼‍💻 Owner** : `{message.from_user.first_name}`\n"
     reply_msg += f"**🔖 Branch** : `master`\n"
     reply_msg += (
         f"**🎖 License** : "
@@ -79,18 +81,18 @@ async def alive(_, m):
     )
     end_time = time.time()
     reply_msg += f"\n📶 **Uptime** : `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](https://t.me/dlwrml)` `\n"
+    reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](tg://user?id={message.from_user.id})` `\n"
     photo = "https://telegra.ph/file/f9f1d48988f2a98f2b510.jpg"
-    await m.delete()
-    if m.reply_to_message:
+    await message.delete()
+    if message.reply_to_message:
         await app.send_photo(
-            m.chat.id,
+            message.chat.id,
             photo,
             caption=reply_msg,
-            reply_to_message_id=m.reply_to_message.message_id,
+            reply_to_message_id=message.reply_to_message.message_id,
         )
     else:
-        await app.send_photo(m.chat.id, photo, caption=reply_msg)
+        await app.send_photo(message.chat.id, photo, caption=reply_msg)
 
 
 @app.on_message(filters.command("ping p", PREFIX) & filters.me)
@@ -101,7 +103,13 @@ async def pingme(_, message: Message):
     start = datetime.now()
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(
-        f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `{(message.from_user.first_name).upper()}`",
-        disable_web_page_preview=True,
-    )
+    if message.from_user.username:
+        await message.edit(
+            f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `{(message.from_user.first_name).upper()}`\n**🦊 Username**: @{message.from_user.username}",
+            disable_web_page_preview=True,
+        )
+    else:
+        await message.edit(
+            f"**[𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗕𝗢𝗧](https://docs.pyrogram.org) • 𝐏𝐈𝐍𝐆!!** \n┈───────────────┈\n**⚡️ kecepatan**: `{m_s} ms`\n**⚡️ uptime**: `{uptime}`\n**👩‍💻 owner**: `{(message.from_user.first_name).upper()}`\n**🦊 Username**: [{message.from_user.first_name}](tg://user?id={message.from_user.id})",
+            disable_web_page_preview=True,
+        )
