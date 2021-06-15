@@ -1,11 +1,11 @@
 from logging import disable
-from datetime import datetime
+import time
 from pyrogram import *
 
 from _pyrogram import app, CMD_HELP
 from config import PREFIX, LOG_CHAT
 import _pyrogram.database.afkdb as afkme
-from _pyrogram.helpers.pyrohelper import get_arg, user_afk
+from _pyrogram.helpers.pyrohelper import get_arg, get_readable_time, user_afk
 
 CMD_HELP.update(
     {
@@ -22,13 +22,12 @@ LOG_CHAT = LOG_CHAT
 
 @app.on_message(filters.command("afk", PREFIX) & filters.me)
 async def afk(Client, message):
-    afk_time = datetime.now()
-    afk_start = afk_time.replace(microsecond=0)
+    afk_time = int(time.time())
     arg = get_arg(message)
     if not arg:
-        await afkme.set_afk(True, afk_start)
+        await afkme.set_afk(True, afk_time)
     else:
-        await afkme.set_afk(True, afk_start, arg)
+        await afkme.set_afk(True, afk_time, arg)
     x = await message.edit("**I am going AFK**")
     await asyncio.sleep(3)
     await x.delete()
@@ -39,12 +38,10 @@ async def afk(Client, message):
 )
 async def afk_mentioned(client, message):
     afk_since, reason = await afkme.get_afk_time()
-    back_alive = datetime.now()
-    afk_e = back_alive.replace(microsecond=0)
-    total_afk_time = str((afk_e - afk_since))
+    afk_e = get_readable_time(time.time() - afk_since)
 
     await message.reply(
-        f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{total_afk_time}`"
+        f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{afk_e}`"
     )
     await app.forward_message(
         chat_id=LOG_CHAT,
@@ -59,12 +56,10 @@ async def auto_unafk(client, message):
     await afkme.set_unafk()
     unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")
     afk_since, reason = await afkme.get_afk_time()
-    back_alive = datetime.now()
-    afk_e = back_alive.replace(microsecond=0)
-    total_afk_time = str((afk_e - afk_since))
+    afk_e = get_readable_time(time.time() - afk_since)
     await app.send_message(
         LOG_CHAT,
-        f"__You are no longer AFK!!.__\n**You have received the above messages when you were offline**\n**Total Time AFK:** `{total_afk_time}`",
+        f"__You are no longer AFK!!.__\n**You have received the above messages when you were offline**\n**Total Time AFK:** `{afk_e}`",
     )
     await asyncio.sleep(3)
     await unafk_message.delete()
