@@ -43,7 +43,7 @@ async def afk_mentioned(client, message):
     await message.reply(
         f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{afk_e}`"
     )
-    await app.forward_message(
+    await message.forward_message(
         chat_id=LOG_CHAT,
         from_chat_id=message.chat.id,
         message_id=message.id,
