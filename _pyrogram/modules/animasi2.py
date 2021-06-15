@@ -21,6 +21,10 @@ CMD_HELP.update(
 `usage` ⇛ ketik .nih
 `usage` ⇛ ketik .hiks
 `usage` ⇛ ketik .hujat
+`usage` ⇛ ketik .heli
+`usage` ⇛ ketik .shoot
+`usage` ⇛ ketik .tank
+`usage` ⇛ ketik .dog
 """
     }
 )
@@ -224,3 +228,54 @@ async def koc(_, e):
     await e.edit("`Skip, Baperan...`")
     sleep(1)
     await e.edit("`BYE.`")
+    
+    
+@app.on_message(filters.command("heli", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("▬▬▬.◙.▬▬▬ \n"
+                 "═▂▄▄▓▄▄▂ \n"
+                 "◢◤ █▀▀████▄▄▄▄◢◤ \n"
+                 "█▄ █ █▄ ███▀▀▀▀▀▀▀╬ \n"
+                 "◥█████◤ \n"
+                 "══╩══╩══ \n"
+                 "╬═╬ \n"
+                 "╬═╬ \n"
+                 "╬═╬ \n"
+                 "╬═╬ \n"
+                 "╬═╬ \n"
+                 "╬═╬ \n"
+                 "╬═╬ Hallo Epribadeh :) \n"
+                 "╬═╬☻/ \n"
+                 "╬═╬/▌ \n"
+                 "╬═╬/ \\ \n")
+    
+    
+@app.on_message(filters.command("shoot", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("_/﹋\\_\n"
+                 "(҂`_´)\n"
+                 "<,︻╦╤─ ҉\n"
+                 "_/﹋\_"
+                 "\n**Gw Tembak Juga Lu Anj!!**")
+    
+    
+@app.on_message(filters.command("tank", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
+                 "▂▄▅█████████▅▄▃▂…\n"
+                 "[███████████████████]\n"
+                 "◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤\n")
+    
+    
+@app.on_message(filters.command("dog", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("╥━━━━━━━━╭━━╮━━┳\n"
+                 "╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
+                 "╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣\n"
+                 "╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣\n"
+                 "╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣\n"
+                 "╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
