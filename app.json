@@ -7,17 +7,18 @@
     "plugin",
     "telegram-bot",
     "productivity",
-    "jayantkageri",
+    "levina-lab",
     "userbot",
     "programming",
     "coding",
     "pyrogram",
-    "telethon"
+    "telethon",
+    "media",
   ],
-  "repository": "https://github.com/levina-lab/vinauserbot",
+  "repository": "https://github.com/levina-lab/veezuserbot",
+  "success_url": "https://t.me/dlwrml"
   "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "website": "https://t.me/levinachannel",
-  "success_url": "https://t.me/dlwrml",
   "stack": "heroku-20",
   "env": {
     "ENV": {
