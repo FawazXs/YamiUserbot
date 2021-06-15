@@ -1,6 +1,6 @@
 {
   "name": "vina userbot",
-  "description": "userbot untuk bersenang senang",
+  "description": "a telegram userbot based on pyrogram and telethon",
   "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
