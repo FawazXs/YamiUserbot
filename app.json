@@ -1,7 +1,6 @@
 {
-  "name": "vina userbot",
+  "name": "veez userbot",
   "description": "a telegram userbot based on pyrogram and telethon",
-  "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
     "developer",
@@ -16,6 +15,7 @@
     "telethon"
   ],
   "repository": "https://github.com/levina-lab/vinauserbot",
+  "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "website": "https://t.me/levinachannel",
   "success_url": "https://t.me/dlwrml",
   "stack": "heroku-20",
@@ -25,15 +25,15 @@
       "value": "ANYTHING"
     },
     "API_ID": {
-      "description": "Dapatkan dari my.telegram.org atau dari @koalasupportbot",
+      "description": "get this value from my.telegram.org",
       "value": ""
     },
     "API_HASH": {
-      "description": "Dapatkan dari my.telegram.org atau dari @koalasupportbot",
+      "description": "get this value from my.telegram.org",
       "value": ""
     },
     "MONGO_URI": {
-      "description": "this is needed for database account.",
+      "description": "this is needed for database account, get from mongodb.com",
       "value" : "",
       "required": true
     }, 
@@ -52,11 +52,11 @@
       "value": ""
     },
     "HEROKU_APP_NAME": {
-      "description": "Heroku App Name yang kamu isi paling awal di paling atas.",
+      "description": "enter the app name you fill in top first.",
       "value": ""
     },
     "HEROKU_API": {
-      "description": "Heroku API Key milik mu, Temukan di https://dashboard.heroku.com/account",
+      "description": "enter your heroku api key, find at https://dashboard.heroku.com/account",
       "value": ""
     }
   },
