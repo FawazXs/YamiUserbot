@@ -70,7 +70,7 @@ async def alive(_, message: Message):
     reply_msg += f"**🤖 Userbot** : `ver 0.1`\n"
     reply_msg += f"**🧪 Project** : `veez project`\n"
     reply_msg += f"**🗃 Database** : `functioning`\n"
-    reply_msg += f"**🧩 Commands** : `35 commands`\n"
+    reply_msg += f"**🧩 Commands** : `45 commands`\n"
     reply_msg += f"**📚 Module** : `7 module`\n"
     reply_msg += f"**👩🏼‍💻 Owner** : `{message.from_user.first_name}`\n"
     reply_msg += f"**🔖 Branch** : `master`\n"
