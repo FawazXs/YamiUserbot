@@ -1,6 +1,6 @@
 {
   "name": "vina userbot",
-  "description": "userbot untuk bersenang senang",
+  "description": "a telegram userbot based on pyrogram and telethon",
   "logo" : "https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg",
   "keywords": [
     "telegram",
@@ -33,22 +33,22 @@
       "value": ""
     },
     "MONGO_URI": {
-      "description": "bagian ini skip saja, belum dibutuhkan.",
+      "description": "this is needed for database account.",
       "value" : "",
-      "required": false
+      "required": true
     }, 
     "PYROGRAM_SESSION": {
       "description": "Pyrogram String Session, Get it by Running python3 -m session",
       "value": "",
-      "required": false
+      "required": true
     },
     "TELETHON_SESSION": {
       "description": "Pyrogram String Session, Get it by Running python3 -m session",
       "value": "",
-      "required": false
+      "required": true
     },
     "LOG_CHAT": {
-      "description": "Log Chat ID",
+      "description": "make a public/private group, generate the id and fill in here,",
       "value": ""
     },
     "HEROKU_APP_NAME": {

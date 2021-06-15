@@ -12,7 +12,7 @@
 <img title="Forks" src="https://img.shields.io/github/forks/levina-lab/vinauserbot?label=Forks&color=brickred&style=flat-square">
 <img title="Watching" src="https://img.shields.io/github/watchers/levina-lab/vinauserbot?label=Watchers&color=red&style=flat-square">
 </p>
-<h4 align="center">userbot yang dapat dijalankan di 2 base telethon dan pyrogram.</h4>
+<h4 align="center">a telegram userbot based on pyrogram and telethon.</h4>
 
 > Telegram userbot based on [Pyrogram](https://github.com/pyrogram/pyrogram) and [Telethon](https://github.com/LonamiWebs/Telethon)
 
@@ -28,20 +28,20 @@ dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun seca
 ### Deploy Userbot & String Session
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) [![STRING SESSION](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
 
-Tekan tombol warna ungu diatas untuk deploy userbot di heroku, dan tombol warna abu abu untuk ambil string session.
+Tap the purple button above to deploy this userbot on heroku and tap the grey button to generate string session.
 
 ### Local Deploy
-- isi di file config.py dengan value milik mu.
-- Buka terminal
+- Fill in config.py with your own values.
+- Open Terminal
 - Install Requirements `pip3 install -r requirements.txt`
-- Jalankan bot `python3 main.py`
-- Selesai :)
+- Running bot `python3 main.py`
+- All Done :)
 
 ## 🛠 Configuration
 - `API_ID` and `API_HASH` - Dapatkan dari https://my.telegram.org
 - `TELETHON_SESSION` dan `PYROGRAM_SESSION`
-- `HEROKU_APP_NAME` [Hanya Untuk Heroku] - Isi dengan app name yang kamu isi di kolom pertama.
-- `HEROKU_API` [Hanya Untuk Heroku] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
+- `HEROKU_APP_NAME` [ONLY FOR HEROKU] - Isi dengan app name yang kamu isi di kolom pertama.
+- `HEROKU_API` [ONLY FOR HEROKU] - Dapatkan dari [sini](https://dashboard.heroku.com/account)
 - `LOG_CHAT` - Buat grup, lalu masukkan [@VinaGroupBot](https://telegram.me/VinaGroupBot) lalu ketik `/id`
 
 ## 💬 Support Group
