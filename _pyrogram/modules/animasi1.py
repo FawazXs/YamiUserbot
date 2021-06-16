@@ -24,6 +24,7 @@ CMD_HELP.update(
 `usage` ⇛ ketik .nyanyi
 `usage` ⇛ ketik .ular
 `usage` ⇛ ketik .bundir
+`usage` ⇛ ketik .pig
 """
     }
 )
@@ -240,3 +241,15 @@ async def koc(_, e):
                  "　＼＿＿／∪ _ ∪) \n"
                  "　　　　　 Ｕ Ｕ\n")
     
+    
+@app.on_message(filters.command("pig", PREFIX) & filters.me)
+async def koc(_, e):
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+    await e.edit("┈┈┏━╮╭━┓┈╭━━━━╮\n"
+                 "┈┈┃┏┗┛┓┃╭┫Ngok ┃\n"
+                 "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
+                 "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
+                 "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
+                 "┈╰━┳┻▅╯╲╲╲╲┃┈┈┈\n"
+                 "┈┈┈╰━┳┓┏┳┓┏╯┈┈┈\n"
+                 "┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n")
