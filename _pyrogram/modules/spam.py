@@ -15,7 +15,7 @@ CMD_HELP.update(
         "utils": """
 **📕 MODULE UTILS:**
 `━━━━━━━━━━━━`
-'spam <count> <text>' ⇛ Spam the number of messages
+'spam (count)(text)' ⇛ Spam the number of messages
 """
     }
 )
