@@ -26,7 +26,7 @@ async def spam(Client, message):
     x = message.text
     y = x.split(" ")
     spam_count = int(y[1])
-    spam_text = y[2:]
+    spam_text = str(y[2:])
     try:
         while spam_count > 0:
             await app.send_message(message.chat.id, spam_text)
