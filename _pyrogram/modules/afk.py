@@ -1,6 +1,7 @@
 from logging import disable
 import time
-from pyrogram import *
+from pyrogram import filters
+import asyncio
 
 from _pyrogram import app, CMD_HELP
 from config import PREFIX, LOG_CHAT
@@ -43,7 +44,7 @@ async def afk_mentioned(client, message):
     await message.reply(
         f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{afk_e}`"
     )
-    await message.forward_message(
+    await app.forward_message(
         chat_id=LOG_CHAT,
         from_chat_id=message.chat.id,
         message_id=message.id,
