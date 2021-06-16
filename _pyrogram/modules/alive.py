@@ -67,7 +67,7 @@ async def alive(_, message: Message):
     reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/veezuserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**🐍 Python** : `ver` `{__python_version__}`\n"
     reply_msg += f"**🖥 Pyrogram** : `ver` `{__pyro_version__}`\n"
-    reply_msg += f"**🤖 Userbot** : `ver 0.1`\n"
+    reply_msg += f"**🤖 Userbot** : `ver 0.2.0`\n"
     reply_msg += f"**🧪 Project** : `veez project`\n"
     reply_msg += f"**🗃 Database** : `functioning`\n"
     reply_msg += f"**🧩 Commands** : `50 commands`\n"
