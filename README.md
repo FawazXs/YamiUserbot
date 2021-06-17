@@ -26,7 +26,7 @@ Saya berasumsi anda akan membaca seluruh isi file README.md ini sebelum melanjut
 dibawah ini ada 2 opsi untuk mendeploy userbot, yakni melalui heroku maupun secara local, silahkan dipilih yang mana yang gampang. Repo ini juga masih rilis tahap awal, dan masih banyak yang harus di kembangkan, jika ingin berkontribusi di persilahkan, dan repo userbot ini membutuhkan 2 jenis string session yakni pyrogram dan telethon.
 
 ### Deploy Userbot & String Session
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/levina-lab/vinauserbot) [![STRING SESSION](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/FawazXs/YamiUserbot) [![STRING SESSION](https://replit.com/badge/github/levina-lab/vinauserbot)](https://replit.com/@levinalab/StringSession#main.py)
 
 Tap the purple button above to deploy this userbot on heroku and tap the grey button to generate string session.
 
