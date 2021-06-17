@@ -1,6 +1,6 @@
-<h1 align="center"><b>veez userbot</b></h1>
+<h1 align="center"><b>Yami Userbot</b></h1>
 <p align="center">
-<img src="https://telegra.ph/file/63ff170a7a8e4ed3fb278.jpg" width="256" height="256"/>
+<img src="https://telegra.ph/file/b18a1a786e370ca903f6f.jpg" width="256" height="256"/>
 </p>
 
 <p align="center">
