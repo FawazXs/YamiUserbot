@@ -29,7 +29,7 @@ async def afk(Client, message):
         await afkme.set_afk(True, afk_time)
     else:
         await afkme.set_afk(True, afk_time, arg)
-    x = await message.edit("**I am going AFK**")
+    x = await message.edit("**Aku Sedang Off💤**")
     await asyncio.sleep(3)
     await x.delete()
 
@@ -42,7 +42,7 @@ async def afk_mentioned(client, message):
     afk_e = get_readable_time(time.time() - afk_since)
 
     await message.reply(
-        f"**I am AFK Right Now**\n**Reason:** `{reason}`\n**AFK for:** `{afk_e}`"
+        f"**Aku Sedang Off Sekarang💤**\n**Reason:** `{reason}`\n**AFK for:** `{afk_e}`"
     )
     await app.forward_message(
         chat_id=LOG_CHAT,
