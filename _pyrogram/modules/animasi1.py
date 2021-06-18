@@ -47,20 +47,20 @@ async def koc(_, e):
 
 
 
-@app.on_message(filters.command("mengsad", PREFIX) & filters.me)
+@app.on_message(filters.command("piki", PREFIX) & filters.me)
 async def koc(_, e):
   if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-    await e.edit("`kamu itu cantik..`")
+    await e.edit("`Piki itu Ganteng😁..`")
     sleep(1)
-    await e.edit("`dan kamu juga manis..`")
+    await e.edit("`Piki juga manis..`")
     sleep(1)
-    await e.edit("`baik hati 🥺`")
+    await e.edit("`Baik hati 🥺`")
     sleep(1)
-    await e.edit("`dan penyayang 🥰`")
+    await e.edit("`penyayang Pulak 🥰`")
     sleep(1)
-    await e.edit("`tapi sayang...`")
+    await e.edit("`Dan Buat Lo Semua...`")
     sleep(1)
-    await e.edit("`kamu bukan jodoh aku 😔`")
+    await e.edit("`NGENTOTTT!!!!!!`")
     
     
 # created by levina, under this cloning from geez userbot
