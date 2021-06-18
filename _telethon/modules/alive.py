@@ -68,4 +68,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"<b><a href=https://docs.telethon.dev>𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡 𝗕𝗢𝗧</a><b/> • 𝐕𝐄𝐄𝐙 𝐏𝐑𝐎𝐉𝐄𝐂𝐓 \n\n<b>⚡️ kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
+    await event.edit(f"<b><a href=https://docs.telethon.dev>𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡 𝗕𝗢𝗧</a><b/> • 𝐘𝐀𝐌𝐈 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 \n\n<b>🚲 Kecepatan<b/>: <code>{ms} ms</code>", parse_mode="html")
