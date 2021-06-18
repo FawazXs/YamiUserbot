@@ -14,7 +14,7 @@ import asyncio
 async def koc(_, m):
   if not m.text[0].isalpha() and m.text[0] not in ("/", "#", "@", "!"):
     await m.edit("╭✠╼━━━━━━❖━━━━━━━✠╮"
-                 "\n` `[♣️ 𝐑𝐄𝐏𝐎 𝐘𝐀𝐌𝐈 𝐔𝐒𝐄𝐑𝐁𝐎𝐓](https://github.com/levina-lab/veezuserbot)` `"
+                 "\n` `[♣️ 𝐑𝐄𝐏𝐎 𝐘𝐀𝐌𝐈 𝐔𝐒𝐄𝐑𝐁𝐎𝐓](https://github.com/FawazXs/YamiUserbot)` `"
                  "\n╰✠╼━━━━━━❖━━━━━━━✠╯"
                  "\nthis repository is managed by veez project, copyrights and licenses have been applied to this repository.")
     await app.send_message(m.chat.id, disable_web_page_preview=True)
