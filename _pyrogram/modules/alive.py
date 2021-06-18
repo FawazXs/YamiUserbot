@@ -64,7 +64,7 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, message: Message):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[۩▬ 𝗩𝗘𝗘𝗭 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/levina-lab/veezuserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
+    reply_msg = f"**[۩▬ 𝐘𝐀𝐌𝐈 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 ▬۩](https://github.com/FawazXs/YamiUserbot)**\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"**🐍 Python** : `ver` `{__python_version__}`\n"
     reply_msg += f"**🖥 Pyrogram** : `ver` `{__pyro_version__}`\n"
     reply_msg += f"**🤖 Userbot** : `ver 0.2.0`\n"
