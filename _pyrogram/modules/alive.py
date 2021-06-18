@@ -68,7 +68,7 @@ async def alive(_, message: Message):
     reply_msg += f"**🐍 Python** : `ver` `{__python_version__}`\n"
     reply_msg += f"**🖥 Pyrogram** : `ver` `{__pyro_version__}`\n"
     reply_msg += f"**🤖 Userbot** : `ver 0.2.0`\n"
-    reply_msg += f"**🧪 Project** : `veez project`\n"
+    reply_msg += f"**🧪 Project** : `Yami Userbot`\n"
     reply_msg += f"**🗃 Database** : `functioning`\n"
     reply_msg += f"**🧩 Commands** : `50 commands`\n"
     reply_msg += f"**📚 Module** : `8 module`\n"
@@ -81,7 +81,7 @@ async def alive(_, message: Message):
     )
     end_time = time.time()
     reply_msg += f"\n📶 **Uptime** : `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
-    reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](tg://user?id={message.from_user.id})` `\n"
+    reply_msg += f"` `[GROUP](https://t.me/caritemanajasih)` `|` `[CHANNEL](https://t.me/ruanggdiskussiiii)` `|` `[OWNER](tg://user?id={message.from_user.id})` `\n"
     photo = "https://telegra.ph/file/b18a1a786e370ca903f6f.jpg"
     await message.delete()
     if message.reply_to_message:
