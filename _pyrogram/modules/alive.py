@@ -82,7 +82,7 @@ async def alive(_, message: Message):
     end_time = time.time()
     reply_msg += f"\n📶 **Uptime** : `{uptime}`\n━━━━━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"` `[GROUP](https://t.me/gcsupportbots)` `|` `[CHANNEL](https://t.me/levinachannel)` `|` `[OWNER](tg://user?id={message.from_user.id})` `\n"
-    photo = "https://telegra.ph/file/f9f1d48988f2a98f2b510.jpg"
+    photo = "https://telegra.ph/file/b18a1a786e370ca903f6f.jpg"
     await message.delete()
     if message.reply_to_message:
         await app.send_photo(
