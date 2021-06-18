@@ -18,7 +18,7 @@ CMD_HELP.update(
 `usage` ⇛ ketik .droopy
 `usage` ⇛ ketik .kevincan
 `usage` ⇛ ketik .pantau
-`usage` ⇛ ketik .mengsad
+`usage` ⇛ ketik .piki
 `usage` ⇛ ketik .hati
 `usage` ⇛ ketik .ok
 `usage` ⇛ ketik .nyanyi
