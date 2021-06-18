@@ -13,7 +13,7 @@ import asyncio
 # created by levina (c) 2021 by veez project
 
 
-@app.on_message(filters.command("kevincan", PREFIX) & filters.me)
+@app.on_message(filters.command("vicky", PREFIX) & filters.me)
 async def koc(_, e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("perkenalkan.")
@@ -24,11 +24,11 @@ async def koc(_, e):
         sleep(1)
         await e.edit("😎")
         sleep(3)
-        await e.edit("namaku kevin")
+        await e.edit("namaku vicky")
         sleep(1)
-        await e.edit("kevin forever")
+        await e.edit("vicky forever")
         sleep(1)
-        await e.edit("kevin handsome")
+        await e.edit("vicky handsome")
         sleep(1)
         await e.edit("orang nya baik hati..")
         sleep(1)
@@ -56,7 +56,7 @@ async def koc(_, e):
         sleep(1)
         await e.edit("iya aku..")
         sleep(1)
-        await e.edit("kevin cool..")
+        await e.edit("vicky cool..")
         sleep(1)
         await e.edit("satu..")
         sleep(1)
