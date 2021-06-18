@@ -25,5 +25,5 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 app.start()
-print("🌸 Veez Userbot Sudah Aktif 🌸 \n⚙ Tipe Bot: Telethon\nJoin @levinachannel for updates")
+print("♣️ Yami Userbot Sudah Aktif ♣️ \n⚙ Tipe Bot: Telethon\nJoin @levinachannel for updates")
 app.run_until_disconnected()
