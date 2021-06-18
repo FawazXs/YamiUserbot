@@ -55,7 +55,7 @@ async def afk_mentioned(client, message):
 @app.on_message(filters.outgoing & filters.me & filters.create(user_afk))
 async def auto_unafk(client, message):
 
-    unafk_message = await app.send_message(message.chat.id, "**I am no longer AFK**")
+    unafk_message = await app.send_message(message.chat.id, "**Aku Sudah Kembali Online Gess👀**")
     afk_since, reason = await afkme.get_afk_time()
     afk_e = get_readable_time(time.time() - afk_since)
     await app.send_message(
